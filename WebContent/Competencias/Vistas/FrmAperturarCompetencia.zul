@@ -1,0 +1,90 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Aperturar Competencia" width="50%" height="100%"
+		border="normal">
+
+		<grid style="margin-top:10px">
+			<columns>
+				<column label="" align="left" width="40%" />
+				<column label="" width="50%" />
+			</columns>
+			<rows>
+				<row>
+
+					<label value="Competencia"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+				<row>
+
+					<label value="Tipo de Competencia"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+				<row>
+
+					<label value="Categoria"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+
+			</rows>
+		</grid>
+
+		<div style="margin-top: 10px">
+			<label
+				value="Seleccione la Competencia que desea aperturar">
+			</label>
+
+			<listbox>
+				<listhead>
+					<listheader label="Competencias" sort="auto" />
+					<listheader label="Descripcion" sort="auto" />
+				</listhead>
+				<listitem>
+					<listcell label="Copa Cerdita" />
+					<listcell label="Copa Homenaje a la Cerdita mayor Edu Ochoa" />
+				</listitem>
+				<listitem>
+					<listcell label="Copa Manati" />
+					<listcell label="Copa homenaje a las estrellas manaties de cheo" />
+				</listitem>
+				<listitem>
+					<listcell label="Copa Tinaja e Quibor" />
+					<listcell label="Homenaje a la gorda negra tinajaaaa" />
+				</listitem>
+			</listbox>
+
+
+		</div>
+
+		<div style="margin-top:15px">
+			<grid>
+				<columns>
+					<column label="Equipos" />
+					<column label="Rosters" />
+					<column label="Indicadores" />
+					<column label="Calendario" />
+				</columns>
+				<rows>
+					<row>
+						<label value="0/4 cerdas" />
+						<label value="25/25" />
+						<label value="Gorda" />
+						<button label="Ver Calendario" onClick="" />
+					</row>
+					<row>
+					<label value="" />
+						<label value="" />
+						<label value="" />
+						<button label="Ver Calendario" onClick="" disabled="true" /></row>
+					<row></row>
+				</rows>
+			</grid>
+
+		</div>
+	</window>
+</zk>

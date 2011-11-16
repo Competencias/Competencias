@@ -1,0 +1,102 @@
+<?page title="Auto Generated index.zul"?>
+<window title="Recursos" border="normal" width="45%" height="100%">
+
+	<div width="95%" style="margin-top:10px">
+		<grid>
+			<columns>
+				<column width="15%" />
+				<column width="30%" />
+				<column width="15%" />
+				<column width="30%" />
+				
+
+			</columns>
+			<rows>
+				<row style="border-style:none">
+					<label value="Juego:"></label>
+					<combobox width="90%"></combobox>
+					<label value="VS"></label>
+					<combobox width="90%"></combobox>
+				
+				</row>
+				<row style="border-style:none">
+					<label value="Lugar:"></label>
+					<textbox width="90%"></textbox>
+					<label value="Fecha:"></label>
+					<datebox width="90%"></datebox>
+				</row>
+				<row>
+					
+				</row>
+				<row style="border-style:none">
+					<label value="Hora:" ></label>
+					<textbox width="90%"></textbox>
+					<label></label>
+						<button label="Buscar" onClick="" />
+				</row>
+			</rows>
+		</grid>
+	</div>
+
+
+	<div width="95%" style="margin-top:10px" align="center">
+
+		<grid>
+			<columns>
+				<column label="  " />
+				<column label="Recursos" width="40%" />
+				<column label="Disponibilidad" width="25%" />
+				<column label="Requeridos" width="25%" />
+			</columns>
+			<rows>
+				<row>
+					<checkbox />
+					<label value="Pelotas"></label>
+					<label value="35"></label>
+					<spinner value="7"/>
+				</row>
+				<row>
+					<checkbox />
+					<label value="Guantes"></label>
+					<label value="15"></label>
+					<spinner value="4"/>
+				</row>
+				<row>
+					<checkbox />
+					<label value="Bates"></label>
+					<label value="20"></label>
+					<spinner value="6"/>
+				</row>
+				<row>
+					<checkbox />
+					<label value="Cascos"></label>
+					<label value="50"></label>
+					<spinner value="4"/>
+				</row>
+				<row>
+					<checkbox />
+					<label value="Termos"></label>
+					<label value="2"></label>
+					<spinner value="1" />
+				</row>
+				<row>
+					<checkbox />
+					<label value="Petos"></label>
+					<label value="5"></label>
+					<spinner value="2"/>
+				</row>
+			</rows>
+		</grid>
+
+
+	</div>
+	<div style="margin-top:10px" align="right" >
+		<hbox>
+			<button label="Guardar" onClick="" image="/icono/guardar.ico" />
+			<button label="Cancelar" onClick="" image="/icono/cancelar.ico" />
+			<button label="Salir" onClick="" />
+			
+		</hbox>
+	</div>
+
+</window>

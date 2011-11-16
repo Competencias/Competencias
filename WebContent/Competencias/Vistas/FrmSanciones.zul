@@ -1,0 +1,128 @@
+<?page title="Sanciones" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Sanciones" border="normal">
+  
+  <panel>
+      <panelchildren>
+      <grid>
+		<columns>
+			<column width="20%" label=""/>
+			<column label=""/>
+		</columns>
+		<rows>
+			<row>	
+			 	<label value="Tipo De falta cometida:  "></label>
+         	 	<combobox>
+            		<comboitem label="Tecnicas"/>
+            		<comboitem label="Recriminables"/>
+            	</combobox>
+			</row>
+			<row>
+				<label value="Descripción : "></label>
+         		<textbox id="intro" rows="3"  value=" Conducta Inapropiada " width="250px"></textbox>
+			</row>
+		</rows>
+	  </grid>
+	</panelchildren>
+  </panel>
+    
+ <separator height="30px"></separator>
+  
+  <panel title="Datos de las Personas Involucradas">
+  <panelchildren>
+  <div >
+  <grid >
+        <columns>
+	     <column width="15">
+	     	<label value="Cédula :"  /> 
+	     	<bandbox value="12345678"></bandbox>
+	     	<space></space>
+	     	<label value="Nombre :" /><textbox value="Julio Pereira" />
+	    	<space></space> 
+           <label value="Rol :" /><textbox value="Jugador" />
+           <space></space>
+           <button label="Agregar" image="./images/agregar.ico"/>
+	     </column>
+        </columns> 
+  </grid>
+   
+   
+   <separator height="30px"></separator>
+<listbox >
+	<listhead>
+		<listheader label="Cédula "  />
+		<listheader label="Nombre "  />
+		<listheader label="Rol "  />
+	</listhead>
+	<listitem>
+		<listcell label="14567876" />
+		<listcell label=" Luis Escalona" />
+		<listcell label=" Jugador" />
+	</listitem>
+	<listitem>
+		<listcell label="" />
+		<listcell label=" " />
+		<listcell label="" />
+	</listitem>
+	<listitem>
+		<listcell label="" />
+		<listcell label=" " />
+		<listcell label=" " />
+	</listitem>
+	
+</listbox>
+</div>
+</panelchildren>
+  </panel>  
+
+
+<panel></panel>
+
+<separator height="30px"/>
+	<panel>
+	<panelchildren>
+	<grid>
+		<columns >
+			<column>
+			<label value="Quien Aplica la Falta :  "></label>
+         		<combobox>
+            	<comboitem label="Arbitro"/>
+            	<comboitem label="Directivo de Liga"/>
+            	<comboitem label="Técnico"/>
+            	</combobox>
+            	<space></space>
+            	<label value="Cantidad de Juegos Suspendido:"></label> <textbox width="5%"></textbox>
+            	<space></space>
+            	<label value="Fecha de Sanción:"></label><datebox />
+            	<space></space>
+            	<label value="Juego:"></label><textbox></textbox>	
+			</column>
+		</columns>
+	</grid>
+	</panelchildren>
+	</panel>
+	
+	<separator></separator>
+	<panel> <!-- Botones -->
+		<panelchildren>
+		    <div align="right">
+				<button image="./images/guardar.ico"
+					label="Guardar" >
+				</button>
+				<button image="./images/consultar.ico"
+					label="Consultar" >
+				</button>
+				<button image="" label="Cancelar">
+				</button>
+				<button image=""
+					label="Salir" >
+				</button>
+			</div>
+		</panelchildren>
+	</panel>
+    
+
+  
+
+</window>
+</zk>

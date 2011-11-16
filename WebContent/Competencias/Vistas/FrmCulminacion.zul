@@ -1,0 +1,42 @@
+<?page title="Auto Generated index.zul"?>
+<window title="Culminación de Competencia" border="normal" width="700px">
+
+
+<grid>
+		<columns>
+			<column label="" align="right"/>
+			<column label=""/>
+			<column label="" align="right"/>
+			<column label=""/>
+		</columns>
+		<rows>
+			<row>
+			<label value="Competencias Activas:"></label>
+			<combobox><comboitem label=""/><comboitem label=""/></combobox>	
+			</row>
+			<row>
+			<label value="Descripción:"></label>
+			<textbox />
+			</row>
+			<row>
+			<label value="Fecha de Inicio:"></label>
+			<datebox />
+			<label value="Fecha de Culminación:"></label>
+			<datebox />
+			</row>
+			<row>
+			<label value="Juegos Programados:"></label>
+			<textbox width="30px"/>
+				</row>
+				<row>
+			<label value="Juegos Registrados:"></label>
+			<textbox width="30px"/>
+		</row>
+		</rows>
+	</grid>
+<div align="right">
+<button label="Culminar Competancia" onClick="" />
+<button label="Cancelar" onClick="" />
+<button label="Salir" onClick="" />
+</div>	
+</window>

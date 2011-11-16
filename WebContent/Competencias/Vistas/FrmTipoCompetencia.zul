@@ -1,0 +1,75 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window title="Definición del Tipo de Competencia"
+		border="normal">
+		<panel>
+			<panelchildren>
+				<grid>
+					<columns>
+						<column label="" />
+						<column label="" />
+					</columns>
+					<rows>
+						<row align="left">
+							<label value="Competencia"></label>
+							<combobox id="cmbCompetencia" width="120px"
+								onChange="seleccionarTipo()" value="Seleccione">
+								<comboitem label="Campeonato de liga" />
+								<comboitem label="Especial" />
+							</combobox>
+						</row>
+						<row align="left">
+							<label value="Nombre de la Competencia:"></label>
+							<textbox width="80px" />
+						</row>
+						<row align="left">
+							<label value="Descripción:"></label>
+							<textbox width="80px" />
+						</row>
+						<row align="left">
+							<label value="Tipo de Organización"></label>
+							<combobox id="cmbTipoCompetencia"
+								width="120px" onChange="seleccionarTipo()" value="Seleccione">
+								<comboitem label="Campeonato de liga" />
+								<comboitem label="Especial" />
+							</combobox>
+						</row>
+					</rows>
+				</grid>
+				<listbox>
+					<listhead>
+						<listheader label="Categoria" sort="auto" />
+						<listheader label="Liga" sort="auto" />
+					</listhead>
+					<listitem>
+						<listcell label="" />
+						<listcell label="" />
+					</listitem>
+					<listitem>
+						<listcell label="" />
+						<listcell label="" />
+					</listitem>
+					<listitem>
+						<listcell label="" />
+						<listcell label="" />
+					</listitem>
+				</listbox>
+				</panelchildren>
+		</panel>
+		<panel width="100%" height="20%">
+			<panelchildren>
+					<div align="right">
+					<button image="./image/guardar.ico" label="Guardar"
+						orient="vertical">
+					</button>
+					<button image="./image/cancelar.ico"
+						label="Cancelar" orient="vertical">
+					</button>
+					<button image="./image/apagar.ico" label="Salir"
+						orient="vertical">
+					</button>
+					</div>
+			</panelchildren>
+		</panel>
+	</window>
+</zk>

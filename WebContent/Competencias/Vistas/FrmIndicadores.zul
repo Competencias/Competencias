@@ -1,0 +1,323 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="REGISTRAR INDICADORES" border="normal" width="600px" >
+	
+	<tabbox>	
+		<tabs>
+			<tab label="Indicadores Individuales" />
+			<tab label="Indicadores Colectivos" />
+		</tabs>
+		
+		<tabpanels>
+			<tabpanel>
+			
+				<panel >
+					<panelchildren>
+						
+						<grid >
+							<columns>
+								<column width="30%"></column>
+								<column width="80%"></column>														
+							</columns>
+							<rows>
+								<row>
+									<label>Categoría</label>
+									<combobox value="Seleccione" width="60%">
+										<comboitem label="Preparatorio I Nivel" />
+										<comboitem label="Preparatorio II Nivel" />
+										<comboitem label="Pre-Infantil" />
+										<comboitem label="Infantil" />
+										<comboitem label="Pre-Junior" />
+										<comboitem label="Junior" />
+										<comboitem label="Juvenil" />
+									</combobox>
+								</row>
+								<row>
+									<label>Tipo</label>
+									<combobox value="Seleccione" width="60%">
+										<comboitem label="Ofensivo" />
+										<comboitem label="Defensivo" />
+										<comboitem label="Pitcher" />
+										<comboitem label="Catcher" />																					
+									</combobox>
+								</row>
+							</rows>
+						</grid>
+				
+						<grid >
+							<columns >
+								<column width="45%"></column>
+								<column width="12%" align="Center"></column>
+								<column width="45%"></column>
+							</columns>
+							<rows>
+								<row >
+									<listbox>
+										<listhead>
+											<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
+											<listheader label="Indicadores" sort="auto" />
+										</listhead>
+										<listitem>
+											<listcell>
+												<checkbox />
+											</listcell>
+											<listcell label="Turnos al Bate (AB)" />
+										</listitem>
+										<listitem>
+											<listcell>
+												<checkbox />
+											</listcell>
+											<listcell label="Carreras Anotadas (D)" />
+										</listitem>
+										<listitem>
+											<listcell>
+												<checkbox />
+											</listcell>
+											<listcell label="Hits Anotados (H)" />
+										</listitem>
+										<listitem>
+											<listcell>
+												<checkbox />
+											</listcell>
+											<listcell label="Dobles (2D)" />
+					    				</listitem>
+									</listbox>
+								
+						<grid>
+							<rows>
+								<row>
+									<button onClick="" image="./images/rightrightarrow_g.png" />
+								</row>
+								<row>
+									<button onClick="" image="./images/rightarrow_g.png" />
+								</row>
+								<row>
+									<button onClick="" image="./images/leftarrow_g.png"/>
+								</row>
+								<row>
+									<button onClick="" image="./images/leftleftarrow_g.png"/>
+								</row>
+							</rows>	
+						</grid>								
+									
+						<listbox>
+							<listhead>
+								<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
+								<listheader label="Indicadores Seleccionados" sort="auto" />
+							</listhead>
+							<listitem>
+								<listcell>
+									<checkbox />
+								</listcell>
+								<listcell label="Turnos al Bate (AB)" />
+							</listitem>
+							<listitem>
+								<listcell>
+									<checkbox />
+								</listcell>
+								<listcell label="Carreras Anotadas (D)" />
+							</listitem>
+							<listitem>
+								<listcell>
+									<checkbox />
+									</listcell>
+								<listcell label="Hits Anotados (H)" />
+							</listitem>
+							<listitem>
+								<listcell>
+									<checkbox />
+								</listcell>
+								<listcell label="Dobles (2D)" />
+							</listitem>
+						</listbox>
+						</row>		
+						<row>
+							<div align="right"> <button label="Generar Planilla" onClick="" /></div>
+						</row>								
+					</rows>
+				</grid>
+																									
+			</panelchildren>
+		</panel>
+		<panel >
+		<panelchildren>
+		<!--  <toolbar > -->
+		<grid>
+		<rows>
+		<row>
+		<div align="right">
+			
+			<button image="./image/guardar.ico" label="Guardar" orient="vertical"> </button>
+			<button image="./image/cancelar.ico" label="Cancelar" orient="vertical"></button>
+			<button image="./image/cancelar.ico" label="Salir" orient="vertical"></button>
+
+			</div>
+		</row>
+		</rows>
+		</grid>
+		<!-- </toolbar>  -->
+		</panelchildren>
+	</panel>	
+	
+		</tabpanel>
+
+	<!--  Indicadores Colectivos -->	
+		<tabpanel>
+			<panel >
+			
+			<panelchildren>
+				<grid >
+					<columns>
+						<column width="30%"></column>
+						<column width="80%"></column>														
+					</columns>
+					<rows>
+						<row>
+							<label>Categoría</label>
+							<combobox value="Seleccione" width="60%">
+								<comboitem label="Preparatorio I Nivel" />
+								<comboitem label="Preparatorio II Nivel" />
+								<comboitem label="Pre-Infantil" />
+								<comboitem label="Infantil" />
+								<comboitem label="Pre-Junior" />
+								<comboitem label="Junior" />
+								<comboitem label="Juvenil" />
+							</combobox>
+						</row>
+						<row>
+							<label>Tipo</label>
+							<combobox value="Seleccione" width="60%">
+								<comboitem label="Ofensivo" />
+								<comboitem label="Defensivo" />
+								<comboitem label="Pitcher" />
+								<comboitem label="Catcher" />																					
+							</combobox>
+						</row>
+					</rows>
+				</grid>
+				
+				<grid >
+					<columns >
+						<column width="45%"></column>
+						<column width="12%" align="Center"></column>
+						<column width="45%"></column>
+					</columns>
+					<rows>
+						<row>
+							<listbox >
+								<listhead>
+									<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
+									<listheader label="Indicadores" sort="auto" />
+								</listhead>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Turnos al Bate (AB)" />
+								</listitem>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Carreras Anotadas (D)" />
+								</listitem>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Hits Anotados (H)" />
+								</listitem>
+								<listitem>
+										<listcell>
+											<checkbox />
+										</listcell>
+										<listcell label="Dobles (2D)" />
+									</listitem>
+							</listbox>
+								
+							<grid>
+								<rows>
+									<row>
+									<button onClick="" image="./images/rightrightarrow_g.png"/>
+									</row>
+									<row>
+									<button onClick="" image="./images/rightarrow_g.png" />
+									</row>
+									<row>
+									<button onClick="" image="./images/leftarrow_g.png"/>
+									</row>
+									<row>
+									<button onClick="" image="./images/leftleftarrow_g.png"/>
+									</row>
+								</rows>
+								
+							</grid>								
+									
+							<listbox >
+								<listhead>
+									<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
+									<listheader label="Indicadores Seleccionados" sort="auto" />
+								</listhead>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Turnos al Bate (AB)" />
+								</listitem>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Carreras Anotadas (D)" />
+								</listitem>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Hits Anotados (H)" />
+								</listitem>
+								<listitem>
+									<listcell>
+										<checkbox />
+									</listcell>
+									<listcell label="Dobles (2D)" />
+								</listitem>
+							</listbox>
+						</row>					
+						<row>
+							<div align="right"> <button label="Generar Planilla" onClick="" /></div>
+						</row>					
+					</rows>
+					
+				</grid>
+
+		</panelchildren>
+				</panel>
+		<panel>
+		<panelchildren>
+		<!--  <toolbar > -->
+		<grid>
+		<rows>
+		<row>
+		<div align="right">
+			
+			<button image="./image/guardar.ico" label="Guardar" orient="vertical"> </button>
+			<button image="./image/cancelar.ico" label="Cancelar" orient="vertical"></button>
+			<button image="./image/cancelar.ico" label="Salir" orient="vertical"></button>
+
+			</div>
+		</row>
+		</rows>
+		</grid>
+		<!-- </toolbar>  -->
+		</panelchildren>
+	</panel>	
+		</tabpanel>
+																						
+		
+		</tabpanels>
+	</tabbox>
+	
+		
+</window>
+</zk>

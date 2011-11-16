@@ -1,0 +1,179 @@
+<?page title="Registro de Jugadores Claves" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Jugadores Claves" border="normal">
+	<div><!-- Inicio de Datos Básicos -->
+	  <grid>
+	    <columns>
+	      <column>
+	        <label value="Categoría:"></label>
+	        <combobox width="20%" value="Seleccione...">	          
+			  <comboitem label="Preparatorio Nivel II"></comboitem>
+			  <comboitem label="Pre-Infantil"></comboitem>
+			  <comboitem label="Infantil"></comboitem>
+			  <comboitem label="Pre-Junior"></comboitem>
+			  <comboitem label="Junior"></comboitem>
+			  <comboitem label="Juvenil"></comboitem>
+	        </combobox>
+	        <space></space>
+	        <label value="Cantidad de Equipos:"></label>
+	        <textbox disabled="true" width="5%"></textbox>
+	        <space></space>
+	        <label value="Fecha:"></label>
+	        <datebox width="10%"></datebox>
+	        <separator></separator>
+	        <label value="Búsqueda:"></label>
+	        <combobox width="20%" value="Seleccione...">
+	          <comboitem label="Por Nombre."></comboitem>
+	          <comboitem label="Por Equipo."></comboitem>
+	        </combobox>
+	        <space></space>
+	        <bandbox width="20%"></bandbox>
+	      </column>	      	     
+	    </columns>	    
+	  </grid>
+	</div><!-- Fin de Datos Básicos -->
+	<separator></separator>
+	
+	<panel>
+	  <panelchildren>
+	    <hbox><!-- Inicio General -->
+	      <hbox><!-- Inicio de Lista de Jugadores -->
+	        <panel title="Lista de Jugadores.">
+	          <panelchildren>
+	            <listbox>
+	              <listhead>	 
+	                <listheader label="Nombre."></listheader>
+	                <listheader label="Equipo." width="30%"></listheader>
+	              </listhead>
+	              <listitem>
+	                <listcell label="Jugador 1"></listcell>
+	                <listcell label="A"></listcell>
+	              </listitem>
+	              <listitem>
+	                <listcell label="Jugador 2"></listcell>
+	                <listcell label="D"></listcell>
+	              </listitem>
+	              <listitem>
+	                <listcell label="Jugador 3"></listcell>
+	                <listcell label="B"></listcell>
+	              </listitem>
+	              <listitem>
+	                <listcell label="Jugador 4"></listcell>
+	                <listcell label="C"></listcell>
+	              </listitem>
+	              <listitem>
+	                <listcell label="Jugador 5"></listcell>
+	                <listcell label="B"></listcell>
+	              </listitem>
+	                <listitem>
+	                <listcell label="Jugador 6"></listcell>
+	                <listcell label="B"></listcell>
+	              </listitem>
+	              <listitem>
+	                <listcell label="Jugador 7"></listcell>
+	                <listcell label="A"></listcell>
+	              </listitem>
+	                <listitem>
+	                <listcell label="Jugador 8"></listcell>
+	                <listcell label="C"></listcell>
+	              </listitem>	            
+	            </listbox>
+	          </panelchildren>
+	        </panel>
+	      </hbox><!-- Fin de Lista de Jugadores -->
+	      <grid><!-- Inicio Renglones -->
+	        <rows>
+	        <row>
+	          <hbox><!-- Inicio de Registro de Renglones -->
+	            <panel title="Renglones.">
+	              <panelchildren>
+	                <grid>	     
+	                  <rows>
+	                    <row>
+	                      <label value="PB"></label>
+	                      <label value="BA"></label>
+	                      <label value="Efec."></label>
+	                      <label value="JG"></label>
+	                    </row>
+	                    <row>
+	                      <textbox width="85%" disabled="true"></textbox>
+	                      <textbox width="85%" disabled="true"></textbox>
+	                      <textbox width="85%" disabled="true"></textbox>
+	                      <textbox width="85%" disabled="true"></textbox>
+	                    </row>
+	                  </rows>
+	                </grid>
+	              </panelchildren>
+	            </panel>
+	          </hbox><!-- Fin de Registro de Renglones -->
+	        </row>
+	        <row>
+	          <label value="PB: Promedio de Bateo"></label>	      
+	        </row>
+	        <row>
+	          <label value="BA: Bases Alcanzadas"></label>
+	        </row>
+	        <row>
+	          <label value="Efec: Efectividad"></label>
+	        </row>
+	        <row>
+	          <label value="JG: Juegos Ganados"></label>
+	        </row>
+	      </rows>
+	    </grid><!-- Fin Renglones -->
+	  	  
+	    <panel><!-- Inicio de Botones -->
+	      <panelchildren>
+	        <button image="./Imagenes/Iconos/agregar.ico"></button>
+	        <separator></separator>
+	        <button image="./Imagenes/Iconos/quitar.ico"></button>
+	      </panelchildren>
+	    </panel><!-- Fin de Botones -->
+	  
+	    <hbox><!-- Inicio Lista de Jugadores Claves. -->
+	      <panel title="Lista de Jugadores Claves.">
+	        <panelchildren>	        
+	          <listbox disabled="true">
+	            <listhead>	 
+	              <listheader label="Nombre."></listheader>
+	              <listheader label="Equipo."></listheader>	            
+	              <listheader label="Renglón."></listheader>
+	              <listheader label="Valor."></listheader>
+	            </listhead>
+	            <listitem>
+	              <listcell label="Jugador 2"></listcell>
+	              <listcell label="D"></listcell>
+	              <listcell label="PB"></listcell>
+	              <listcell label="350"></listcell>
+	            </listitem>
+	            <listitem>
+	              <listcell label="Jugador 1"></listcell>
+	              <listcell label="A"></listcell>
+	              <listcell label="Efec"></listcell>
+	              <listcell label="1.02"></listcell>
+	            </listitem>
+	            <listitem>
+	              <listcell label="Jugador 8"></listcell>
+	              <listcell label="C"></listcell>
+	              <listcell label="PB"></listcell>
+	              <listcell label="240"></listcell>
+	            </listitem>
+	          </listbox>
+	        </panelchildren>
+	      </panel>
+	    </hbox><!-- Fin Lista de Jugadores Claves. -->
+	  </hbox><!-- Fin General -->
+	</panelchildren>
+  </panel>
+  
+  <div align="right">
+		   <hbox>
+		     <button image="./Imagenes/Iconos/guardar.ico" label="Guardar"></button>
+		     <button image="./Imagenes/Iconos/editar.ico" label="Editar"></button>
+		     <button image="" label="Eliminar"></button>
+		     <button image="" label="Salir"></button>
+		   </hbox>		  
+</div>
+  
+</window>
+</zk>
