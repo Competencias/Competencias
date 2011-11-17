@@ -1,16 +1,10 @@
 <?page title="Registro de Equipo" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="Equipos" border="normal" id="FrmEquipos">
+<window title="Equipos" border="normal"  onClose="VerRoster()">
 
-<tabbox id="tab">
-	<tabs>
-	<tab>Registro de Equipos</tab>
-	
-	</tabs>
 
-<tabpanels>
-	<tabpanel><!-- Registro de Equipos -->
-	<panel width="100%">
+	<div id="PrincipalEquipos">
+	<panel title="Registro de Equipos"  >
 						<panelchildren>
 							<grid>
 								<columns>
@@ -55,12 +49,13 @@
 	<panel>
 		<panelchildren>
 		<div>
-			<grid width="100%" >
+			<grid width="auto" height="auto" >
 			<columns>
 				<column align="center"></column>
 				<column align="center"></column>
 				<column align="center"></column>
 				<column align="center"></column>
+				
 			</columns>
 			<rows>
 				<row>
@@ -69,7 +64,10 @@
 					<comboitem value="Por Categoria"></comboitem>
 					</combobox>
 					<button label="Quitar Equipo de la Lista"></button>
-					<button label="Procesar Roster Oficial de Equipo" onClick="VerRoster()"></button>
+					<button label="Procesar Roster Oficial de Equipo" onClick='Enlace("/Competencias/Vistas/FrmRoster.zul")' ></button>
+					
+					
+					
 				</row>
 			</rows>
 		
@@ -77,7 +75,7 @@
 			</grid>
 			</div>
 			
-									<listbox width="99%" id="ListaEquipos">
+									<listbox width="auto" height="auto" id="ListaEquipos">
 							<listhead>
 								<listheader label="N°" width="5%" align="center"></listheader>
 								<listheader label="Equipo Seleccionados" width="25%" align="center" id="Equipo"></listheader>
@@ -216,143 +214,32 @@
 		</panelchildren>
 	
 	
-	</panel>								
-									
-									
-									
-									
-									
+	</panel>				
+	</div>	
 	
-	
-	</tabpanel>
-	<tabpanel><!-- Procesar Roster Oficial -->
-		<panel title="Jugadores">
-			<panelchildren>
-				<grid>
-					<columns>
-					<column width="20%" align="center"></column>
-					<column width="30%" align="center"></column>
-					<column width="20%" align="center"></column>
-					<column width="10%" align="center"></column>
-					<column	width="20%" align="center"></column>
-					</columns>
-					<rows>
-						<row>
-						<label>Equipo</label>
-						<combobox value="Equipo 1"></combobox>
-						<label>Revisado</label>
-						<checkbox></checkbox>
-						<button>Quitar Jugador</button>
-						
-						</row>
-					</rows>
-				</grid>	
-					<listbox width="100%" >
-							<listhead>
-								<listheader label="Nombre" width="30%"></listheader>
-								<listheader label="Edad" align="center"></listheader>
-								<listheader label="Categoria" align="center"></listheader>
-								<listheader label="Solvencia" align="center"></listheader>
-								<listheader label="Alojamiento" align="center"></listheader>
-								<listheader label="Representate" align="center"></listheader>
-								
-							</listhead>
-								<listitem>
-								<listcell>Nombre Jugador 1 </listcell>
-								<listcell>14 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 1 </listcell>
-								
-								
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 2 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 2 </listcell>
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 3 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 3 </listcell>
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 4 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 4 </listcell>
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 5 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 5 </listcell>
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 6 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 6 </listcell>
-								</listitem>
-								<listitem>
-								<listcell>Nombre Jugador 7 </listcell>
-								<listcell>15 </listcell>
-								<listcell>Junior </listcell>
-								<listcell>Si </listcell>
-								<listcell>Si </listcell>
-								<listcell>Representante 7 </listcell>
-								</listitem>
-								
-						</listbox>
 				
-			
-			</panelchildren>
-		</panel>
-		<panel title="Observaciones">
-			<panelchildren>
-				<grid>
-					<columns>
-					<column></column>
-					</columns>
-					<rows>
-						<row>
-						<textbox width="100%"></textbox>
-						
-						</row>
-					</rows>
-					
-				</grid>
-			</panelchildren>
-		
-		</panel>
+	<include id="Rost">
 	
-	</tabpanel>
+	</include>								
+									
+									
+									
+									
 	
-</tabpanels>
-
-
-
-</tabbox>
+	
 
 	<zscript>
-	public void VerRoster() {
+	
+	<![CDATA[
 		
-		Executions.createComponents("FrmRoster.zul", FrmEquipos, null);
-		tab.detach();
-	}
+			 
+	public void Enlace(String cad) {
+					
+					
+					Rost.setSrc(cad);
+					PrincipalEquipos.setVisible(false);
+				}
+		]]>
 </zscript>
 
 				

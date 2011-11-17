@@ -1,43 +1,50 @@
 <?page title="Auto Generated index.zul"?>
-<window title="Control de Inventario" border="normal" width="" height="">
+<div align="center" >
+<window title="Control de Inventario" border="normal" width="65%" height="">
 
-	<div width="95%" style="margin-top:10px">
-		<grid>
-			<columns>
-				<column width="" />
-				<column width="" />
-				<column width="" />
-				<column width="" />
-				
+	<panel border="normal">
+		  <caption label="Datos de la Competencia"></caption>
+		    <panelchildren>
+		      <grid>
+		         <columns>
+		           <column width="40px" align="left"></column>
+		           <column width="40px"></column>
+		           <column width="60px"></column>
+		           <column width="60px"></column>
+		           <column width="50px"></column>
+		           <column width="60px"></column>
+		         </columns>
+		         <rows>
+		            <row>
+		               <label value="Competencia" ></label>
+		               <hbox>
+		               <textbox cols="11"></textbox>      
+		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
+		               </hbox>  
+		               <label value="Fecha Inicio"></label>
+		               <textbox cols="10"></textbox> 
+		               <label value="Fecha Fin"></label>
+		               <textbox cols="10"></textbox>
+		                
+		            </row>		              
+		            <row >
+		                <label value="Juego"></label>     
+		                <hbox>
+		                <textbox cols="20"></textbox> 
+		                <button image="../../Recursos/Imagenes/consultar.ico"></button>
+		                </hbox>
+		                <label value="Fecha"></label>
+		                <textbox cols="10"></textbox>  
+		                
+		            </row>
+		            <row>                          
+		            </row>
+		         </rows>
+		      </grid>
+		    </panelchildren>
+		  </panel>
 
-			</columns>
-			<rows>
-				<row style="border-style:none">
-					<label value="Juego Realizado:"></label>
-					<combobox width=""></combobox>
-				
-				</row>
-				<row style="border-style:none">
-					<label value="Lugar:"></label>
-					<textbox width=""></textbox>
-					<label value="Fecha:"></label>
-					<datebox width=""></datebox>
-				</row>
-				<row>
-					
-				</row>
-				<row style="border-style:none">
-					<label value="Hora:" ></label>
-					<textbox width=""></textbox>
-					<label></label>
-						
-				</row>
-			</rows>
-		</grid>
-	</div>
-
-
-	<div width="" style="margin-top:10px" align="center">
+	<div width="" style="" align="center">
 
 		<grid>
 			<columns>
@@ -88,13 +95,24 @@
 
 
 	</div>
-	<div style="margin-top:10px" align="right" >
-		<hbox>
-			<button label="Guardar" onClick="" image="/icono/guardar.ico" />
-			<button label="Cancelar" onClick="" image="/icono/cancelar.ico" />
-			<button label="Salir" onClick="" />
-			
-		</hbox>
-	</div>
+						<div >
+ 		<div align="right"  height="30px">    	
+					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
+							orient="horizontal"  >
+							</button>
+					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
+							orient="horizontal"  >
+							
+							</button>
+					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+							orient="horizontal" >
+							</button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir"
+							orient="horizontal" >
+							</button>											
+		
+ 		</div>
+    </div>	
 
 </window>
+</div>

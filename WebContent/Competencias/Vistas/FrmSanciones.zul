@@ -1,122 +1,118 @@
 <?page title="Sanciones" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="Sanciones" border="normal">
+<div align="center" >
+<window title="REGISTRO DE SANCIONES" border="normal" style="margin-left:20px" width="70%">
   
-  <panel>
-      <panelchildren>
-      <grid>
-		<columns>
-			<column width="20%" label=""/>
-			<column label=""/>
-		</columns>
-		<rows>
-			<row>	
-			 	<label value="Tipo De falta cometida:  "></label>
-         	 	<combobox>
-            		<comboitem label="Tecnicas"/>
-            		<comboitem label="Recriminables"/>
-            	</combobox>
-			</row>
-			<row>
-				<label value="Descripción : "></label>
-         		<textbox id="intro" rows="3"  value=" Conducta Inapropiada " width="250px"></textbox>
-			</row>
-		</rows>
-	  </grid>
-	</panelchildren>
-  </panel>
-    
- <separator height="30px"></separator>
+ <panel border="normal">
+		  <caption label="Datos de la Competencia"></caption>
+		    <panelchildren>
+		      <grid>
+		         <columns>
+		           <column width="40px" align="left"></column>
+		           <column width="40px"></column>
+		           <column width="60px"></column>
+		           <column width="60px"></column>
+		           <column width="50px"></column>
+		           <column width="60px"></column>
+		         </columns>
+		         <rows>
+		            <row>
+		               <label value="Competencia" ></label>
+		               <hbox>
+		               <textbox cols="11"></textbox>      
+		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
+		               </hbox>  
+		               <label value="Fecha Inicio"></label>
+		               <textbox cols="10"></textbox> 
+		               <label value="Fecha Fin"></label>
+		               <textbox cols="10"></textbox>
+		                
+		            </row>		              
+		            <row >
+		                <label value="Juego"></label>     
+		                <hbox>
+		                <textbox cols="20"></textbox> 
+		                <button image="../../Recursos/Imagenes/consultar.ico"></button>
+		                </hbox>
+		                <label value="Fecha"></label>
+		                <textbox cols="10"></textbox>  
+		                
+		            </row>
+		            <row>                          
+		            </row>
+		         </rows>
+		      </grid>
+		    </panelchildren>
+		  </panel>
   
-  <panel title="Datos de las Personas Involucradas">
-  <panelchildren>
-  <div >
-  <grid >
-        <columns>
-	     <column width="15">
-	     	<label value="Cédula :"  /> 
-	     	<bandbox value="12345678"></bandbox>
-	     	<space></space>
-	     	<label value="Nombre :" /><textbox value="Julio Pereira" />
-	    	<space></space> 
-           <label value="Rol :" /><textbox value="Jugador" />
-           <space></space>
-           <button label="Agregar" image="./images/agregar.ico"/>
-	     </column>
-        </columns> 
-  </grid>
-   
-   
-   <separator height="30px"></separator>
-<listbox >
-	<listhead>
-		<listheader label="Cédula "  />
-		<listheader label="Nombre "  />
-		<listheader label="Rol "  />
-	</listhead>
-	<listitem>
-		<listcell label="14567876" />
-		<listcell label=" Luis Escalona" />
-		<listcell label=" Jugador" />
-	</listitem>
-	<listitem>
-		<listcell label="" />
-		<listcell label=" " />
-		<listcell label="" />
-	</listitem>
-	<listitem>
-		<listcell label="" />
-		<listcell label=" " />
-		<listcell label=" " />
-	</listitem>
-	
-</listbox>
-</div>
-</panelchildren>
-  </panel>  
-
-
-<panel></panel>
-
-<separator height="30px"/>
-	<panel>
+  <panel border="normal">
+	<caption label="Datos del Atleta"></caption>
 	<panelchildren>
 	<grid>
-		<columns >
-			<column>
-			<label value="Quien Aplica la Falta :  "></label>
-         		<combobox>
-            	<comboitem label="Arbitro"/>
-            	<comboitem label="Directivo de Liga"/>
-            	<comboitem label="Técnico"/>
-            	</combobox>
-            	<space></space>
-            	<label value="Cantidad de Juegos Suspendido:"></label> <textbox width="5%"></textbox>
-            	<space></space>
-            	<label value="Fecha de Sanción:"></label><datebox />
-            	<space></space>
-            	<label value="Juego:"></label><textbox></textbox>	
-			</column>
-		</columns>
+	<columns>
+	   <column></column>
+	   <column></column>
+	</columns>
+	<rows>
+		<row width="20%">
+		  <label value="Equipo"/>
+		  <combobox cols="15"></combobox>			
+		</row>
+		<row>
+		  <label value="Categoría" />
+		  <textbox value=""></textbox>
+		</row>
+		<row width="20%">
+			<label value="Cédula"/>
+			<bandbox cols="10"></bandbox>			
+		</row>
+		<row>
+		  <label value="Nombre" />
+		  <textbox cols="30" value=""></textbox>
+		</row>
+		<row>
+			<label value="Número"  /> 
+			<textbox cols="2"/>
+			
+		</row>
+    	</rows>
+	
 	</grid>
 	</panelchildren>
 	</panel>
-	
+	  <panel border="normal" collapsible="true">
+	  <caption label="Datos de la Sanción"></caption>
+	      <panelchildren>
+	      <grid>
+			<columns>
+				<column width="20%" label=""/>
+				<column label=""/>
+			</columns>
+			<rows>
+				<row>	
+				 	<label value="Tipo de falta"></label>
+	         	 	<combobox value="Seleccione">         	 	    
+	         	 	    <comboitem label="Tecnicas"/>
+	            		<comboitem label="Recriminables"/>
+	            	</combobox>
+				</row>
+				<row>
+					<label value="Descripción"></label>
+	         		<textbox id="intro" rows="3"  value="" width="99%"></textbox>
+				</row>
+			</rows>
+		  </grid>
+		</panelchildren>
+	  </panel>
 	<separator></separator>
 	<panel> <!-- Botones -->
 		<panelchildren>
 		    <div align="right">
-				<button image="./images/guardar.ico"
-					label="Guardar" >
-				</button>
-				<button image="./images/consultar.ico"
-					label="Consultar" >
-				</button>
-				<button image="" label="Cancelar">
-				</button>
-				<button image=""
-					label="Salir" >
-				</button>
+				<button image="../../Recursos/Imagenes/guardar.ico" label="Guardar" ></button>
+				<button image="../../Recursos/Imagenes/editar.ico"	label="Modificar" ></button>
+				<button image="../../Recursos/Imagenes/cancelar.ico" label="Cancelar"></button>
+				<button image="../../Recursos/Imagenes/salir.png" label="Salir" ></button>
+				
 			</div>
 		</panelchildren>
 	</panel>
@@ -125,4 +121,5 @@
   
 
 </window>
+</div>
 </zk>
