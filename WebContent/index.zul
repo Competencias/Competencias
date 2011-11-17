@@ -486,7 +486,8 @@
 													open="false">
 													<treerow>
 														<treecell
-															label="Nueva Competencia" />
+															label="Nueva Competencia" 
+															onClick='enlace("/Competencias/Vistas/FrmNuevaCompetencia.zul")'/>
 													</treerow>
 												</treeitem>
 												<treeitem
@@ -526,7 +527,7 @@
 													<treerow>
 														<treecell
 															label="Calendario"
-															onClick='enlace("/Competencias/Vistas/FrmCalendarioExterno.zul")'/>
+															onClick='enlace("/Competencias/Vistas/FrmCalendario.zul")'/>
 													</treerow>
 												</treeitem>
 												<treeitem

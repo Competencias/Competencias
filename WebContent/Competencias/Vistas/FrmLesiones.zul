@@ -83,7 +83,7 @@
 	</panelchildren>
 	</panel>
 	<panel border="normal" collapsible="true">
-	<caption label="Datos de la Lesion"></caption>
+	<caption label="Datos de la Lesión"></caption>
 	<panelchildren>
 	<grid> 
 	  <columns>
