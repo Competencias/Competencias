@@ -626,7 +626,7 @@
 													<treerow>
 														<treecell
 															label="Registro de Resultados" 
-															onClick='enlace("/Competencias/Vistas/FrmResultados.zul")' />
+															onClick='enlace("/Competencias/Vistas/FrmRegistroResultados.zul")' />
 													</treerow>
 												</treeitem>
 												<treeitem
