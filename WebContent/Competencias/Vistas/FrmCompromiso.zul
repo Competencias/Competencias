@@ -1,8 +1,8 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-<window title="Compromiso de Pago" border="normal" position="center" mode="modal">
+<window title="Compromiso de Pago" border="normal" position="center" >
 
-<groupbox width="700px">
+<groupbox width="650px">
 <!-- Primera Grid -->
 <grid>
 		<columns>
@@ -145,14 +145,14 @@
 	</grid>
 
 
-            <div align="right">
-               <space width="20px"/>
-               <button label= "Aceptar" width="100px" image="images/aceptar.ico"/>
-               <space width="20px"/>
-               <button label= "Cancelar" width="100px" image= "images/cancelar.ico"/>
-               <space width="20px"/>
-               <button label= "Salir" width="100px"/>
-            </div>    
+           	<div >
+ 		<div align="right"  height="30px">    	
+					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar" orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar" orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar" orient="horizontal" > </button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir" orient="horizontal" > 		</button>
+ 		</div>
+    </div>	 
       </div>
    </groupbox>
 </window>

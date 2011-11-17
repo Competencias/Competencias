@@ -1,6 +1,35 @@
 <?page title="Registro de Jugadores Claves" contentType="text/html;charset=UTF-8"?>
 <zk>
+<div align="center">
 <window title="Jugadores Claves" border="normal">
+ <panel border="normal">
+		  <caption label="Datos de la Competencia"></caption>
+		    <panelchildren>
+		      <grid>
+		         <columns>
+		           <column width="40px" align="left"></column>
+		           <column width="40px"></column>
+		           <column width="60px"></column>
+		           <column width="60px"></column>
+		           <column width="50px"></column>
+		           <column width="60px"></column>
+		         </columns>
+		         <rows>
+		            <row>
+		               <label value="Competencia" ></label>
+		               <hbox>
+		               <textbox cols="11"></textbox>      
+		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
+		               </hbox>  
+		               <label value="Fecha Inicio"></label>
+		               <textbox cols="10"></textbox> 
+		               <label value="Fecha Fin"></label>
+		               <textbox cols="10"></textbox>	                
+		            </row>
+		         </rows>
+		      </grid>
+		    </panelchildren>
+		  </panel>
 	<div><!-- Inicio de Datos Básicos -->
 	  <grid>
 	    <columns>
@@ -124,9 +153,9 @@
 	  	  
 	    <panel><!-- Inicio de Botones -->
 	      <panelchildren>
-	        <button image="./Imagenes/Iconos/agregar.ico"></button>
+	        <button image="/Recursos/Imagenes/agregar.ico"></button>
 	        <separator></separator>
-	        <button image="./Imagenes/Iconos/quitar.ico"></button>
+	        <button image="/Recursos/Imagenes/quitar.ico"></button>
 	      </panelchildren>
 	    </panel><!-- Fin de Botones -->
 	  
@@ -166,14 +195,19 @@
 	</panelchildren>
   </panel>
   
-  <div align="right">
-		   <hbox>
-		     <button image="./Imagenes/Iconos/guardar.ico" label="Guardar"></button>
-		     <button image="./Imagenes/Iconos/editar.ico" label="Editar"></button>
-		     <button image="" label="Eliminar"></button>
-		     <button image="" label="Salir"></button>
-		   </hbox>		  
-</div>
+	<div >
+ 		<div align="right"  height="30px">    	
+					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
+							orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
+							orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+							orient="horizontal" ></button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir"
+							orient="horizontal" ></button>
+ 		</div>
+    </div>	
   
 </window>
+</div>
 </zk>
