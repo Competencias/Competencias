@@ -71,10 +71,8 @@
 					<column label="Calendario" width="25%"/>
 				</columns>
 				<rows>
-					<row>						
-						<a label=" ">
-						  						
-						</a>
+					<row>					
+						
 						<label value="0/4 " >
 						
 						</label>
