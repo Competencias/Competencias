@@ -52,6 +52,13 @@
 													onClick='enlace("General/Datos_Basicos_NC.zul")' />
 											</treerow>
 										</treeitem>
+										<treeitem>
+											<treerow>
+												<treecell
+													label="Reglas"
+													onClick='enlace("/Competencias/Vistas/FrmReglas.zul")' />
+											</treerow>
+										</treeitem>
 									</treechildren>
 								</treeitem>
 								<treeitem open="false">

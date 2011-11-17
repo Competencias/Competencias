@@ -1,5 +1,6 @@
 <?page title="Auto Generated index.zul"?>
-<window title="Liga" border="normal" width="50%">
+<div align="center">
+<window title="LIGA" border="normal" width="40%">
 
 	<panel>
 		<panelchildren>
@@ -60,13 +61,26 @@
 					</row>
 				</rows>
 			</grid>
-			<div align="right">
-				<button label="Crear"></button>
-				<button label="Modificar"></button>
-				<button label="Eliminar"></button>
-			</div>
+				<div >
+ 		<div align="right"  height="30px">    	
+					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
+							orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
+							orient="horizontal"  >
+							
+							</button>
+					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+							orient="horizontal" >
+							</button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir"
+							orient="horizontal" >
+							</button>											
+		
+ 		</div>
+    </div>	
 		</panelchildren>
 	</panel>
 
 
 </window>
+</div>
