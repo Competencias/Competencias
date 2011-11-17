@@ -1,0 +1,177 @@
+<?page title="Registro de Resultados" contentType="text/html;charset=UTF-8"?>
+<zk>
+<div id="Dregresult">
+<window title="Registro de Resultados" border="normal" id="FrmRresultados">
+<panel border="normal">
+		  <caption label="Datos de la Competencia"></caption>
+		    <panelchildren>
+		      <grid>
+		         <columns>
+		           <column width="40px" align="left"></column>
+		           <column width="40px"></column>
+		           <column width="60px"></column>
+		           <column width="60px"></column>
+		           <column width="50px"></column>
+		           <column width="60px"></column>
+		         </columns>
+		         <rows>
+		            <row>
+		               <label value="Tipo de Competencia" ></label>
+		               <hbox>
+		               <textbox cols="11"></textbox>      
+		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
+		               </hbox>  
+		               <label value="Fecha Inicio"></label>
+		               <textbox cols="10"></textbox> 
+		               <label value="Fecha Fin"></label>
+		               <textbox cols="10"></textbox>
+		                
+		            </row>		              
+		            <row >
+		                <label value="Juego"></label>     
+		                <hbox>
+		                <textbox cols="20"></textbox> 
+		                <button image="../../Recursos/Imagenes/consultar.ico"></button>
+		                </hbox>
+		                <label value="Fecha"></label>
+		                <textbox cols="10"></textbox>  
+		                
+		            </row>
+		            <row>
+		              
+			        
+		             
+		                                      
+		            </row>
+		         </rows>
+		      </grid>
+		    </panelchildren>
+		  </panel>
+<panel title="Datos Basicos del Juego">
+	<panelchildren>
+		<grid>
+			<columns>
+				<column width="5%" align="center"></column>
+				<column width="15%" align="center"></column>
+				<column width="5%" align="center"></column>
+				<column width="10%" align="center"></column>
+				<column width="6%" align="center"></column>
+				<column width="10%" align="center"></column>
+				<column width="12%" align="center"></column>
+				<column width="12%" align="center"></column>
+				<column width="10%" align="center"></column>
+				<column width="16%" align="center"></column>
+				
+			</columns>
+			
+			<rows>
+				<row>
+					<label>Fecha:</label>
+					<datebox width="90%"></datebox>
+					<label>Hora:</label>
+					<textbox width="90%" ></textbox>
+					<label>Campo:</label>
+					<textbox width="90%"></textbox>
+					<label>Equipos Participantes </label>
+					<grid>
+						<rows>
+							<row>
+								<textbox value="Equipo A" width="90%"></textbox>
+							</row>
+							<row>
+								<textbox value="Equipo B" width="90%"></textbox>
+							</row>
+						</rows>	
+					</grid>
+						<label>Duracion</label>
+					<grid>
+						<rows>
+							<row>
+							<label>Innings</label>
+							<spinner width="90%"></spinner>
+							</row>
+							<row>
+							<label>Horas</label>
+							<spinner width="90%" ></spinner>
+							</row>
+						</rows>
+					</grid>
+				
+				</row>
+			</rows>
+		</grid>
+	
+	
+	</panelchildren>
+</panel>
+<panel title="Resultados en Colectivo">
+	<panelchildren>
+		<grid>
+			<columns>
+				<column width="10%" align="center"> Equipos  </column>
+				<column align="center" width="15%">1</column>
+				<column align="center" width="15%">2</column>
+				<column align="center" width="15%">3</column>
+				<column align="center" width="15%">4</column>
+				<column align="center" width="15%">5</column>
+				<column width="10%" align="center"></column>
+			</columns>
+			<rows>
+				<row >
+				
+					<label>Equipo A</label>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<button label="Agregar + Innings"></button>
+				</row>
+				<row>
+					<label>Equipo B</label>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<textbox width="90%"></textbox>
+					<button label="Finalizar Juego"></button>
+					
+				</row>
+				
+			</rows>
+		
+		</grid>
+		<grid>
+			<columns></columns>
+			<rows>
+				<row>
+					<button label="Resultados Individuales" onClick='Enlace("/Competencias/Vistas/FrmResultados.zul")'></button>
+				</row>
+			</rows>
+		</grid>
+	</panelchildren>
+</panel>
+<zscript>
+	<![CDATA[
+				void VerRindividuales(){
+
+				FrmRresultados.getChildren().clear();
+				Component component = Executions.createComponents("FrmResultados.zul",FrmRresultados,new HashMap());
+				component.setParent(FrmRresultados);		
+							}	
+				
+				public void Enlace(String cad) {
+					
+					
+					Dregresult.setSrc(cad);
+				}
+
+
+
+				]]>
+
+</zscript>
+
+</window>
+</div>
+</zk>
