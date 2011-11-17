@@ -3,36 +3,63 @@
 <div align="Center">
 <window title="Culminación de Competencia" border="normal" width="650px">
 
- <panel border="normal">
-		  <caption label="Datos de la Competencia"></caption>
-		    <panelchildren>
-		      <grid>
-		         <columns>
-		           <column width="40px" align="left"></column>
-		           <column width="40px"></column>
-		           <column width="60px"></column>
-		           <column width="60px"></column>
-		           <column width="50px"></column>
-		           <column width="60px"></column>
-		         </columns>
-		         <rows>
-		            <row>
-		               <label value="Tipo de Competencia" ></label>
-		               <hbox>
-		               <textbox cols="11"></textbox>      
-		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
-		               </hbox>  
-		               <label value="Fecha Inicio"></label>
-		               <textbox cols="10"></textbox> 
-		               <label value="Fecha Fin"></label>
-		               <textbox cols="10"></textbox>
-		                
-		            </row>	              
-		          
-		         </rows>
-		      </grid>
-		    </panelchildren>
-		  </panel>
+		<grid style="margin-top:10px">
+			<columns>
+				<column label="" align="left" width="40%" />
+				<column label="" width="50%" />
+			</columns>
+			<rows>
+				<row>
+
+					<label value="Competencia"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+				<row>
+
+					<label value="Tipo de Competencia"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+				<row>
+
+					<label value="Categoria"></label>
+					<bandbox>
+						<bandpopup></bandpopup>
+					</bandbox>
+				</row>
+
+			</rows>
+		</grid>
+
+		<div style="margin-top: 10px">
+			<label
+				value="Seleccione la Competencia que desea aperturar">
+			</label>
+
+			<listbox>
+				<listhead>
+					<listheader label="Competencias" sort="auto" />
+					<listheader label="Descripcion" sort="auto" />
+				</listhead>
+				<listitem>
+					<listcell label="Copa Cerdita" />
+					<listcell label="Copa Homenaje a la Cerdita mayor " />
+				</listitem>
+				<listitem>
+					<listcell label="Copa Manati" />
+					<listcell label="Copa homenaje a las estrellas manaties " />
+				</listitem>
+				<listitem>
+					<listcell label="Copa Tinaja e Quibor" />
+					<listcell label="Homenaje a la gorda negra tinajaaaa" />
+				</listitem>
+			</listbox>
+
+
+		</div>
 <grid>
 		
 		<rows>			

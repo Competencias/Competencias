@@ -1,6 +1,7 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<window title="Aperturar Competencia" width="50%" height="100%"
+<div align="center">
+	<window title="APERTURAR COMPETENCIA" width="50%" height="100%"
 		border="normal">
 
 		<grid style="margin-top:10px">
@@ -45,16 +46,16 @@
 					<listheader label="Descripcion" sort="auto" />
 				</listhead>
 				<listitem>
-					<listcell label="Copa Cerdita" />
-					<listcell label="Copa Homenaje a la Cerdita mayor Edu Ochoa" />
+					<listcell label="Copa Cer" />
+					<listcell label="Copa Homenaje la  mayor " />
 				</listitem>
 				<listitem>
-					<listcell label="Copa Manati" />
-					<listcell label="Copa homenaje a las estrellas manaties de cheo" />
+					<listcell label="Copa Mana" />
+					<listcell label="Copa homenaje a las estrellas  " />
 				</listitem>
 				<listitem>
-					<listcell label="Copa Tinaja e Quibor" />
-					<listcell label="Homenaje a la gorda negra tinajaaaa" />
+					<listcell label="Copa Tinaja " />
+					<listcell label="Homenaje a la B" />
 				</listitem>
 			</listbox>
 
@@ -64,16 +65,22 @@
 		<div style="margin-top:15px">
 			<grid>
 				<columns>
-					<column label="Equipos" />
-					<column label="Rosters" />
-					<column label="Indicadores" />
-					<column label="Calendario" />
+					<column label="Equipos" width="25%"/>
+					<column label="Rosters" width="25%"/>
+					<column label="Indicadores" width="25%"/>
+					<column label="Calendario" width="25%"/>
 				</columns>
 				<rows>
-					<row>
-						<label value="0/4 cerdas" />
+					<row>						
+						<a label=" ">
+						  						
+						</a>
+						<label value="0/4 " >
+						
+						</label>
+												
 						<label value="25/25" />
-						<label value="Gorda" />
+						<label value="10" />
 						<button label="Ver Calendario" onClick="" />
 					</row>
 					<row>
@@ -86,5 +93,13 @@
 			</grid>
 
 		</div>
+		<div align="right">
+			<button image="/Recursos/Imagenes/apertura.png" label="Aperturar" ></button>
+			<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+							orient="horizontal" ></button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir"
+							orient="horizontal" ></button> 
+		</div>
 	</window>
+	</div>
 </zk>
