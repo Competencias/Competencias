@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><?page title="Registro de Resultados" contentType="text/html;charset=UTF-8"?>
 <zk>
 	<div id="Dregresult" align="Center">
-		<window title="REGISTRO DE RESULTADOS" border="normal" id="FrmRresultados"
-			width="75%" height="auto">
+		<window title="REGISTRO DE RESULTADOS" border="normal"
+			id="FrmRresultados" width="75%" height="auto">
 			<panel border="normal">
 				<caption label="Datos de la Competencia" />
 				<panelchildren>
@@ -20,7 +20,8 @@
 								<label value="Competencia" />
 
 								<textbox cols="20" />
-								<button image="../../Recursos/Imagenes/consultar.ico" />
+								<button
+									image="../../Recursos/Imagenes/consultar.ico" />
 
 
 								<label value="Fecha Inicio" />
@@ -50,7 +51,8 @@
 								<label value="Juego" />
 								<hbox>
 									<textbox cols="20" />
-									<button image="../../Recursos/Imagenes/consultar.ico" />
+									<button
+										image="../../Recursos/Imagenes/consultar.ico" />
 
 								</hbox>
 								<label value="Fecha" />
@@ -64,6 +66,16 @@
 								<label value="Innigs" />
 								<spinner cols="9" />
 								<label value="Tiempo" />
+								<textbox cols="11" />
+							</row>
+							<row>
+								<label value="Umpire"></label>
+								<hbox>
+									<textbox cols="20" />
+									<button
+										image="../../Recursos/Imagenes/consultar.ico" />
+								</hbox>
+								<label value="Anotador"></label>
 								<textbox cols="11" />
 							</row>
 						</rows>
@@ -90,53 +102,56 @@
 							<column align="center" label="C" />
 							<column align="center" label="H" />
 							<column align="center" label="E" />
-							
-						
+
+
 						</columns>
 						<rows>
 							<row>
-                              <label value="Equipo A"></label>
-                              <label value="0"></label>		
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	                           							
+								<label value="Equipo A"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
 							</row>
 							<row>
-							  <label value="Equipo B"></label>
-							  <label value="0"></label>		
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	
-                              <label value="0"></label>	  							
+								<label value="Equipo B"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
+								<label value="0"></label>
 							</row>
 
 						</rows>
 
-					</grid>
-					<grid>
-						<columns />
-						<rows>
-							<row>
-								<button label="Resultados Individuales"
-									onClick='Enlace("/Competencias/Vistas/FrmResultados.zul")' />
-
-							</row>
-						</rows>
 					</grid>
 				</panelchildren>
+			</panel>
+			<panel>
+			  <panelchildren>
+				  <div align="right">
+				    <button image="" label="Resultados Individuales" ></button>
+				    <button image="../../Recursos/Imagenes/guardar.ico" label="Guardar" ></button>
+					<button image="../../Recursos/Imagenes/eliminar.ico" label="Eliminar" ></button>
+					<button image="../../Recursos/Imagenes/cancelar.ico" label="Cancelar"></button>
+					<button image="../../Recursos/Imagenes/salir.png" label="Salir" ></button>
+				  </div>
+			  </panelchildren>
 			</panel>
 			<zscript>
 	<![CDATA[
@@ -156,5 +171,6 @@
 			</zscript>
 
 		</window>
+
 	</div>
 </zk>
