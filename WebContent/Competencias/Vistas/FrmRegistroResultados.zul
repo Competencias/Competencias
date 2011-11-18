@@ -3,7 +3,7 @@
 <zscript>
 <![CDATA[
      void resultados(){
-    	 Executions.createComponents("FrmResultados.zul", null, null); 
+    	 Executions.createComponents("/Competencias/Vistas/FrmResultados.zul", null, null); 
      }
  ]]>
  </zscript>
