@@ -1,5 +1,6 @@
 <?page title="Registro de Equipo" contentType="text/html;charset=UTF-8"?>
 <zk>
+<div align="center">
 	<window title="Equipos" border="normal" width="auto" height="auto"
 		onClose="VerRoster()">
 
@@ -428,4 +429,5 @@
 
 
 	</window>
+	</div>
 </zk>

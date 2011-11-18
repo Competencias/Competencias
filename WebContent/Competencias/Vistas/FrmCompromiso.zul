@@ -1,5 +1,6 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
+<div align="center">
 <window title="Compromiso de Pago" border="normal" position="center" >
 
 <groupbox width="650px">
@@ -156,4 +157,5 @@
       </div>
    </groupbox>
 </window>
+</div>
 </zk>

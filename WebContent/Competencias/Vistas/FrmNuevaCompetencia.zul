@@ -1,6 +1,6 @@
 <?page title="NUEVA COMPETENCIA" contentType="text/html;charset=UTF-8"?>
 <zk>
-
+<div align="center">
 	<window title="NUEVA COMPETENCIA" border="normal">
 		<zscript><![CDATA[
 	//@DECLARATION
@@ -11,7 +11,6 @@
 	public void Operador() {
 		formula.setText(formula.getText() + cmbOperador.getText());
 	}
-
 	public void Cambio() {
 
 		if (cmbCompetencia.getText().equals("Interna")) {
@@ -59,73 +58,71 @@
 								title="Registrar Competencia">
 								<panelchildren>
 									<grid>
+										<columns>
+											<column width="25%"
+												align="left" />
+											<column width="25%"
+												align="left" />
+											<column width="25%"
+												align="left" />
+											<column width="25%"
+												align="left" />
+										</columns>
 										<rows>
 											<row align="left">
-												<hbox>
-													<label
-														value="Competencia">
-													</label>
-													<combobox
-														id="cmbCompetencia" width="80%" onChange="Cambio()"
-														value="Seleccione" readonly="true">
-														<comboitem
-															label="Interna" />
-														<comboitem
-															label="Especial" />
-														<comboitem
-															label="Oficial" />
-													</combobox>
-												</hbox>
-												<hbox>
-													<label
-														value="Modalidad: " width="100%">
-													</label>
-													<combobox
-														id="cmbModalidad" width="80%" value="Seleccione"
-														readonly="true">
-													</combobox>
-												</hbox>
-											</row>
 
-											<row>
-												<hbox>
-													<label
-														value="Cantidad de Equipos:" />
-													<spinner value="2"
-														width="20%" />
-												</hbox>
-
-												<hbox>
-													<label
-														value="Jugadores por Roster" />
-													<spinner value="6"
-														width="20%" />
-												</hbox>
-
-
+												<label
+													value="Competencia" />
+												<combobox
+													id="cmbCompetencia" width="70%" onChange="Cambio()"
+													value="Seleccione" readonly="true">
+													<comboitem
+														label="Interna" />
+													<comboitem
+														label="Especial" />
+													<comboitem
+														label="Oficial" />
+												</combobox>
+												<label
+													value="Modalidad: " width="100%" />
+												<combobox
+													id="cmbModalidad" width="80%" value="Seleccione"
+													readonly="true" />
 											</row>
 											<row>
+												<label
+													value="Cantidad de Equipos:" />
+												<spinner value="2"
+													width="20%" />
+												<label
+													value="Jugadores por Roster" />
+												<spinner value="6"
+													width="20%" />
+											</row>
+											<row>
+
+												<label
+													value="Monto de Inscripción:" />
 												<hbox>
-													<label
-														value="Monto de Inscripción:" />
 													<textbox width="70%"
 														value="0.00" />
 													<label
 														value="Bs.f." />
 												</hbox>
-												<hbox>
-													<label
-														value="Sede:">
-													</label>
-													<bandbox
-														width="80%">
-														<bandpopup></bandpopup>
-													</bandbox>
-												</hbox>
+												<label value="Sede:" />
+												<bandbox width="80%">
+													<bandpopup>
+													</bandpopup>
+												</bandbox>
 											</row>
 											<row>
-
 												<grid>
+													<columns>
+														<column
+															width="50%" />
+														<column
+															width="50%" />
+													</columns>
 													<rows>
 														<row>
 															<label
@@ -135,21 +132,16 @@
 														</row>
 														<row>
 															<spinner
-																value="6" width="100px">
-															</spinner>
+																value="0" width="50%" />
 															<spinner
-																value="6" width="100px">
-															</spinner>
+																value="0" width="50%" />
 														</row>
 													</rows>
-
 												</grid>
-												<hbox>
 												<label
-													value="Modalidad de Enfrentamiento: ">
-												</label>
+													value="Modalidad de Enfrentamiento:" />
 												<combobox
-													value="Seleccione" readonly="true">
+													value="Seleccione" readonly="true" width="70%">
 													<comboitem>
 														Modo 1
 													</comboitem>
@@ -160,7 +152,7 @@
 														Modo 3
 													</comboitem>
 												</combobox>
-												</hbox>
+
 											</row>
 										</rows>
 									</grid>
@@ -233,7 +225,7 @@
 												Condiciones Generales
 											</label>
 											<textbox width="98%"
-												height="80%" multiline="true">
+												height="100%" multiline="true">
 											</textbox>
 										</row>
 										<row align="left">
@@ -242,7 +234,7 @@
 										Posiciones">
 											</label>
 											<textbox width="98%"
-												height="80%" multiline="true">
+												height="100%" multiline="true">
 											</textbox>
 										</row>
 										<row align="left">
@@ -250,7 +242,7 @@
 												value="En Base a los Extrainning">
 											</label>
 											<textbox width="98%"
-												height="80%" multiline="true">
+												height="100%" multiline="true">
 
 											</textbox>
 										</row>
@@ -262,17 +254,24 @@
 				</tabpanel>
 			</tabpanels>
 		</tabbox>
-		<div width="690px" align="right">
-			<button image="../../Recursos/Imagenes/guardar.ico"
-				label="Guardar">
-			</button>
-			<button image="../../Recursos/Imagenes/cancelar.ico"
-				label="Cancelar">
-			</button>
-			<button image="../../Recursos/Imagenes/salir.png"
-				label="Salir">
-			</button>
-		</div>
+		<div >
+ 		<div align="right"  height="30px">    	
+					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
+							orient="horizontal"  ></button>
+					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
+							orient="horizontal"  >
+							
+							</button>
+					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+							orient="horizontal" >
+							</button>
+					<button image="/Recursos/Imagenes/salir.png" label="Salir"
+							orient="horizontal" >
+							</button>											
+		
+ 		</div>
+    </div>	
 
 	</window>
+	</div>
 </zk>
