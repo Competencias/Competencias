@@ -13,9 +13,10 @@
 						<row align="left">
 							<label value="Competencia"></label>
 							<combobox id="cmbCompetencia" width="80%"
-								onChange="seleccionarTipo()" value="Seleccione">
-								<comboitem label="Campeonato de liga" />
+								 value="Seleccione">
+								<comboitem label="Oficial" />
 								<comboitem label="Especial" />
+								<comboitem label="Interna" />
 							</combobox>
 						</row>
 						<row align="left">
@@ -30,8 +31,8 @@
 							<label value="Tipo de Organización"></label>
 							<combobox id="cmbTipoCompetencia"
 								width="80%" onChange="seleccionarTipo()" value="Seleccione">
-								<comboitem label="Campeonato de liga" />
-								<comboitem label="Especial" />
+								<comboitem label="Categoria" />
+								<comboitem label="Liga" />
 							</combobox>
 						</row>
 					</rows>
@@ -39,19 +40,19 @@
 				<listbox>
 					<listhead>
 						<listheader label="Categoria" sort="auto" />
-						<listheader label="Liga" sort="auto" />
+						
 					</listhead>
 					<listitem>
 						<listcell label="" />
-						<listcell label="" />
+						
 					</listitem>
 					<listitem>
 						<listcell label="" />
-						<listcell label="" />
+						
 					</listitem>
 					<listitem>
 						<listcell label="" />
-						<listcell label="" />
+						
 					</listitem>
 				</listbox>
 				</panelchildren>

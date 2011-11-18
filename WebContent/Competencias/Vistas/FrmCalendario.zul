@@ -351,8 +351,7 @@
 												width="10%" align="center" />
 											<column label=" Estatus"
 												width="10%" align="center" />
-											<column label="" width="10%"
-												align="center" />
+										
 										</columns>
 										<rows>
 											<row>
@@ -366,7 +365,7 @@
 												<label value="10:00 AM" />
 												<label
 													value="Finalizado" />
-												<checkbox></checkbox>
+												
 											</row>
 											<row>
 												<label value="UCLA" />
@@ -377,9 +376,9 @@
 												<label
 													value="Estadio UCLA - Lara" />
 												<label value="9:00 AM" />
-												<label
+												<label 
 													value="Finalizado" />
-												<checkbox></checkbox>
+											
 											</row>
 											<row>
 												<label
@@ -390,9 +389,7 @@
 												<label value="" />
 												<label value="" />
 												<label value="" />
-												<checkbox
-													disabled="true">
-												</checkbox>
+											
 											</row>
 											<row>
 												<label value="" />
@@ -401,9 +398,7 @@
 												<label value="" />
 												<label value="" />
 												<label value="" />
-												<checkbox
-													disabled="true">
-												</checkbox>
+											
 											</row>
 										</rows>
 									</grid>

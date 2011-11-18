@@ -1,7 +1,7 @@
 <?page title="Registro de Jugadores Claves" contentType="text/html;charset=UTF-8"?>
 <zk>
 <div align="center">
-<window title="Jugadores Claves" border="normal">
+<window title="JUGADORES CLAVES" border="normal">
  <panel border="normal">
 		  <caption label="Datos de la Competencia"></caption>
 		    <panelchildren>
@@ -47,9 +47,8 @@
 	        <label value="Cantidad de Equipos:"></label>
 	        <textbox disabled="true" width="5%"></textbox>
 	        <space></space>
-	        <label value="Fecha:"></label>
-	        <datebox width="10%"></datebox>
-	        <separator></separator>
+	        
+	        <separator></separator>	        
 	        <label value="Búsqueda:"></label>
 	        <combobox width="20%" value="Seleccione...">
 	          <comboitem label="Por Nombre."></comboitem>
@@ -199,9 +198,7 @@
 	<div >
  		<div align="right"  height="30px">    	
 					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
-							orient="horizontal"  ></button>
-					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
-							orient="horizontal"  ></button>
+							orient="horizontal"  ></button>			
 					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
 							orient="horizontal" ></button>
 					<button image="/Recursos/Imagenes/salir.png" label="Salir"

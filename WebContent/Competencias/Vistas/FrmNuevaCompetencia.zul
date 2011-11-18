@@ -4,6 +4,7 @@
 	<window title="NUEVA COMPETENCIA" border="normal">
 		<zscript><![CDATA[
 	//@DECLARATION
+
 	public void Seleccion() {
 		//		formula.setText(formula.getText() +  );
 
@@ -14,20 +15,20 @@
 	public void Cambio() {
 
 		if (cmbCompetencia.getText().equals("Interna")) {
-			cmbModalidad.append("Vacacional");
-			cmbModalidad.append("Semana Santa");
-			cmbModalidad.append("Carnaval");
+//			cmbModalidad.append("Vacacional");
+//			cmbModalidad.append("Semana Santa");
+//			cmbModalidad.append("Carnaval");
 
 		}
 		if (cmbCompetencia.getText().equals("Especial")) {
-			cmbModalidad.append("Amistoso");
-			cmbModalidad.append("..");
-			cmbModalidad.append("..");
+//			cmbModalidad.append("Amistoso");
+//			cmbModalidad.append("..");
+//			cmbModalidad.append("..");
 
 		} else if (cmbCompetencia.getText().equals("Oficial")) {
-			cmbModalidad.append("Nacional");
-			cmbModalidad.append("Regional");
-			cmbModalidad.append("Municipal");
+//			cmbModalidad.append("Nacional");
+//			cmbModalidad.append("Regional");
+//			cmbModalidad.append("Municipal");
 
 		}
 	}
@@ -87,7 +88,14 @@
 													value="Modalidad: " width="100%" />
 												<combobox
 													id="cmbModalidad" width="80%" value="Seleccione"
-													readonly="true" />
+													readonly="true" >
+													<comboitem
+														label="Nacional" />
+													<comboitem
+														label="Regional" />
+													<comboitem
+														label="Minicipal" />
+												</combobox>	
 											</row>
 											<row>
 												<label
