@@ -1,7 +1,7 @@
 <?page title="Auto Generated index.zul"?>
 <zk>
 <div align="Center">
-<window title="Culminación de Competencia" border="normal" width="650px">
+<window title="CULMINACION DE COMPETENCIA" border="normal" width="55%" height="50%">
 
 		<grid style="margin-top:10px">
 			<columns>
@@ -36,7 +36,7 @@
 
 		<div style="margin-top: 10px">
 			<label
-				value="Seleccione la Competencia que desea aperturar">
+				value="Seleccione la Competencia que desea culminar">
 			</label>
 
 			<listbox>
@@ -45,40 +45,52 @@
 					<listheader label="Descripcion" sort="auto" />
 				</listhead>
 				<listitem>
-					<listcell label="Copa Cerdita" />
-					<listcell label="Copa Homenaje a la Cerdita mayor " />
+					<listcell label="Copa Cer" />
+					<listcell label="Copa Homenaje a la  mayor " />
 				</listitem>
 				<listitem>
-					<listcell label="Copa Manati" />
-					<listcell label="Copa homenaje a las estrellas manaties " />
+					<listcell label="Copa Mana" />
+					<listcell label="Copa homenaje a las estrellas  " />
 				</listitem>
 				<listitem>
-					<listcell label="Copa Tinaja e Quibor" />
-					<listcell label="Homenaje a la gorda negra tinajaaaa" />
+					<listcell label="Copa Tinaja " />
+					<listcell label="Homenaje a la  tinaja" />
 				</listitem>
 			</listbox>
 
 
 		</div>
 <grid>
-		
+		<columns>
+			<column width="10%"/>
+			<column width="15%"/>
+			<column width="10%"/>
+			<column width="15%"/>
+			<column width="10%"/>
+			<column width="25%"/>
+			
+		</columns>
 		<rows>			
 			<row>
-			<label value="Juegos Programados:" width="30%"></label>
-			<textbox width="30px"/>				
-			<label value="Juegos Registrados:" width="30%"></label>
-			<textbox width="30px"/>
+			<label value="Juegos Programados:" width="10%"></label>
+			<textbox width="90%"/>				
+			<label value="Juegos Registrados:" width="10%"></label>
+			<textbox width="90%"/>
+			<label value="Fecha Culminacion:" width="10%" style="align:left;"></label>
+			 <datebox width="80%" constraint="no empty: Debe seleccionar una fecha" ></datebox>
+			
+			
 		</row>
 		</rows>
 	</grid>
 	<div >
- 		<div align="right"  height="30px">    	
-					<button label="Culminar Competancia" onClick="" ></button>
-					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
+ 	<div align="right">
+			<button image="/Recursos/Imagenes/apertura.png" label="Culminar" ></button>
+			<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
 							orient="horizontal" ></button>
 					<button image="/Recursos/Imagenes/salir.png" label="Salir"
-							orient="horizontal" ></button>
- 		</div>
+							orient="horizontal" ></button> 
+		</div>
     </div>	
  </window>
  </div>
