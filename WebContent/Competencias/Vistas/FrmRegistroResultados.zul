@@ -114,7 +114,7 @@
 						</columns>
 						<rows>
 							<row>
-								<label value="Equipo A"></label>
+								<label style="color:blue;text-decoration:underline" onClick="resultados()" value="Equipo A"></label>
 								<label value="0"></label>
 								<label value="0"></label>
 								<label value="0"></label>
@@ -152,7 +152,7 @@
 			<panel>
 			  <panelchildren>
 				  <div align="right">
-				    <button image="" label="Resultados Individuales"  onClick="resultados()" ></button>
+				    
 				    <button image="../../Recursos/Imagenes/guardar.ico" label="Guardar" ></button>
 					<button image="../../Recursos/Imagenes/eliminar.ico" label="Eliminar" ></button>
 					<button image="../../Recursos/Imagenes/cancelar.ico" label="Cancelar"></button>

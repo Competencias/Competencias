@@ -381,9 +381,7 @@
 													<spinner
 														value="1">
 													</spinner>
-													<button
-														label="Cargar Inning">
-													</button>
+												
 												</hbox>
 
 
@@ -740,9 +738,7 @@
 													<spinner
 														value="1">
 													</spinner>
-													<button
-														label="Cargar Inning">
-													</button>
+												
 												</hbox>
 
 
