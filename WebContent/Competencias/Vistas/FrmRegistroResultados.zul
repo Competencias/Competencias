@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><?page title="Registro de Resultados" contentType="text/html;charset=UTF-8"?>
 <zk>
-	<div id="Dregresult" align="Center">
+<zscript>
+<![CDATA[
+     void resultados(){
+    	 Executions.createComponents("FrmResultados.zul", null, null); 
+     }
+ ]]>
+ </zscript>
+<div id="Dregresult" align="Center">
 		<window title="REGISTRO DE RESULTADOS" border="normal"
 			id="FrmRresultados" width="75%" height="auto">
 			<panel border="normal">
@@ -145,7 +152,7 @@
 			<panel>
 			  <panelchildren>
 				  <div align="right">
-				    <button image="" label="Resultados Individuales" ></button>
+				    <button image="" label="Resultados Individuales"  onClick="resultados()" ></button>
 				    <button image="../../Recursos/Imagenes/guardar.ico" label="Guardar" ></button>
 					<button image="../../Recursos/Imagenes/eliminar.ico" label="Eliminar" ></button>
 					<button image="../../Recursos/Imagenes/cancelar.ico" label="Cancelar"></button>
@@ -153,22 +160,6 @@
 				  </div>
 			  </panelchildren>
 			</panel>
-			<zscript>
-	<![CDATA[
-	void VerRindividuales() {
-
-		FrmRresultados.getChildren().clear();
-		Component component = Executions.createComponents("FrmResultados.zul",
-				FrmRresultados, new HashMap());
-		component.setParent(FrmRresultados);
-	}
-	public void Enlace(String cad) {
-
-		Dregresult.setSrc(cad);
-	}
-]]>
-
-			</zscript>
 
 		</window>
 

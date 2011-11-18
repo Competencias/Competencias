@@ -1,7 +1,7 @@
 <?page title="Auto Generated index.zul"?>
-<window title="Resultados Individuales" border="normal" height="auto"
-	width="auto">
 
+<window title="Resultados Individuales" border="normal" height="auto"
+	width="auto" mode="modal">
 	<panel border="normal" collapsible="true" >
 		<caption label="RESULTADOS INDIVIDUALES POR INNING"></caption>
 		<panelchildren>
@@ -26,9 +26,6 @@
 													<spinner
 														value="1">
 													</spinner>
-													<button
-														label="Cargar Inning">
-													</button>
 												</hbox>
 
 
@@ -2285,7 +2282,7 @@
 			<div align="right">
 		<hbox>
 			<button label="Guardar"></button>
-			<button label="Salir"></button>
+			<button label="Salir" onClick="salir()"></button>
 		</hbox>
 	</div>
 		</panelchildren>
