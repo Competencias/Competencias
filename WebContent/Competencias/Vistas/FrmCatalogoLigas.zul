@@ -1,0 +1,56 @@
+<?page title="Catalogo Ligas" contentType="text/html;charset=UTF-8"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver" ?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="frmCatalogoLigas"?>
+
+<zk>
+
+	<div align="center">
+		<window id="frmCatalogoLigas" apply="controlador.competencia.CntrlFrmCatalogoLigas" title="Ligas Existentes"
+			border="normal" width="400px" mode="modal" closable="true" height="350px">
+			<panel width="100%">
+				<panelchildren>
+					<div style="margin-top:5px">
+						<label value="Filtro"></label>
+						<textbox></textbox>
+						<button label="Buscar"></button>
+					</div>
+					<listbox id="lsbxLigas" mold="paging" pageSize="10" style="margin-top:5px" model="@{cntrl.ligas}"
+						height="240px" >
+						<listhead>
+							<listheader label="Nombre" align="center" width="55px">
+							</listheader>
+							<listheader label="Localidad" align="center" width="65px">
+							</listheader>
+						</listhead>  
+
+						<listitem self="@{each=liga}">
+							<listcell label="@{liga.nombre}"></listcell>
+                            <listcell label="@{liga.localidad}"></listcell>
+                           
+						</listitem>
+
+					</listbox>
+					<div align="right">
+						<button id="btnAceptar"
+							image="../../Recursos/Imagenes/aceptar.ico" label="Aceptar">
+						</button>
+						<button id="btnSalir"
+							image="../../Recursos/Imagenes/salir.png" label="Salir"
+							>
+						</button>
+					</div>
+
+
+				</panelchildren>
+
+
+			</panel>
+			<zscript><![CDATA[
+	public void Salir() {
+		FrmCatalogoLigas.onClose();
+	}
+]]></zscript>
+
+		</window>
+	</div>
+</zk>

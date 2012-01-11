@@ -1,322 +1,319 @@
 <?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?variable-resolver class="org.zkoss.zkplus.spring.DelegatingVariableResolver" ?>
+<?init class="org.zkoss.zkplus.databind.AnnotateDataBinderInit" root="frmIndicador" ?>
+
 <zk>
-<div align="center">
-<window title="Registrar Indicadores" border="normal" width="600px" position="center">
+	<div align="center">
+		<window title="Registrar Indicadores" border="normal"
+			closable="true" width="690px" id="frmIndicador"
+			apply="controlador.competencia.CntrlFrmIndicador" style="left">
 			<panel border="normal">
-		  <caption label="Datos de la Competencia"></caption>
-		    <panelchildren>
-		      <grid>
-		         <columns>
-		           <column width="40px" align="left"></column>
-		           <column width="40px"></column>
-		           <column width="60px"></column>
-		           <column width="60px"></column>
-		           <column width="50px"></column>
-		           <column width="60px"></column>
-		         </columns>
-		         <rows>
-		            <row>
-		               <label value="Competencia" ></label>
-		               <hbox>
-		               <textbox cols="11"></textbox>      
-		               <button image="../../Recursos/Imagenes/consultar.ico"></button>  
-		               </hbox>  
-		               <label value="Fecha Inicio"></label>
-		               <textbox cols="10"></textbox> 
-		               <label value="Fecha Fin"></label>
-		               <textbox cols="10"></textbox>
-		                
-		            </row>
-		         </rows>
-		      </grid>
-		    </panelchildren>
-		  </panel>	
-	<tabbox>
-		
-		<tabs>
-			<tab label="Indicadores Individuales" />
-			<tab label="Indicadores Colectivos" />
-		</tabs>
-		
-		<tabpanels>				
-			<tabpanel>			
-				<panel >
-					<panelchildren>
-						
-						<grid >
-							<columns>
-								<column width="30%"></column>
-								<column width="80%"></column>														
-							</columns>
-							<rows>
-								<row>
-									<label>Categoría</label>
-									<combobox value="Seleccione" width="60%">
-										<comboitem label="Preparatorio I Nivel" />
-										<comboitem label="Preparatorio II Nivel" />
-										<comboitem label="Pre-Infantil" />
-										<comboitem label="Infantil" />
-										<comboitem label="Pre-Junior" />
-										<comboitem label="Junior" />
-										<comboitem label="Juvenil" />
-									</combobox>
-								</row>
-								<row>
-									<label>Tipo</label>
-									<combobox value="Seleccione" width="60%">
-										<comboitem label="Ofensivo" />
-										<comboitem label="Defensivo" />
-										<comboitem label="Pitcher" />
-										<comboitem label="Catcher" />																					
-									</combobox>
-								</row>
-							</rows>
-						</grid>
-				
-						<grid >
-							<columns >
-								<column width="45%"></column>
-								<column width="12%" align="Center"></column>
-								<column width="45%"></column>
-							</columns>
-							<rows>
-								<row >
-									<listbox>
-										<listhead>
-											<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
-											<listheader label="Indicadores" sort="auto" />
-										</listhead>
-										<listitem>
-											<listcell>
-												<checkbox />
-											</listcell>
-											<listcell label="Turnos al Bate (AB)" />
-										</listitem>
-										<listitem>
-											<listcell>
-												<checkbox />
-											</listcell>
-											<listcell label="Carreras Anotadas (D)" />
-										</listitem>
-										<listitem>
-											<listcell>
-												<checkbox />
-											</listcell>
-											<listcell label="Hits Anotados (H)" />
-										</listitem>
-										<listitem>
-											<listcell>
-												<checkbox />
-											</listcell>
-											<listcell label="Dobles (2D)" />
-					    				</listitem>
-									</listbox>
-								
-						<grid>
-							<rows>
-								<row>
-									<button onClick="" image="/Recursos/Imagenes/rightrightarrow_g.png" />
-								</row>
-								<row>
-									<button onClick="" image="/Recursos/Imagenes/rightarrow_g.png" />
-								</row>
-								<row>
-									<button onClick="" image="/Recursos/Imagenes/leftarrow_g.png"/>
-								</row>
-								<row>
-									<button onClick="" image="/Recursos/Imagenes/leftleftarrow_g.png"/>
-								</row>
-							</rows>	
-						</grid>								
-									
-						<listbox>
-							<listhead>
-								<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
-								<listheader label="Indicadores Seleccionados" sort="auto" />
-							</listhead>
-							<listitem>
-								<listcell>
-									<checkbox />
-								</listcell>
-								<listcell label="Turnos al Bate (AB)" />
-							</listitem>
-							<listitem>
-								<listcell>
-									<checkbox />
-								</listcell>
-								<listcell label="Carreras Anotadas (D)" />
-							</listitem>
-							<listitem>
-								<listcell>
-									<checkbox />
-									</listcell>
-								<listcell label="Hits Anotados (H)" />
-							</listitem>
-							<listitem>
-								<listcell>
-									<checkbox />
-								</listcell>
-								<listcell label="Dobles (2D)" />
-							</listitem>
-						</listbox>
-						</row>														
-					</rows>
-				</grid>
-																									
-			</panelchildren>
-		</panel>
-	
-	
-		</tabpanel>
+				<caption label="Datos de la Competencia"></caption>
+				<panelchildren>
+					<grid>
+						<columns>
+							<column width="40px" align="left"></column>
+							<column width="40px"></column>
+							<column width="60px"></column>
+							<column width="60px"></column>
+						</columns>
+						<rows>
+							<row style="border:none">
+								<label value="Nombre"></label>
+								<hbox>
+									<textbox id="txtNombreCompetencia"
+										value="@{cntrl.competencia.nombre }">
+									</textbox>
+									<button id="btnBuscarCompetencia"
+										image="../../Recursos/Imagenes/consultar.ico">
+									</button>
+								</hbox>
+								<label value="Tipo"></label>
+								<textbox id="txtTipoCompetencia"
+									disabled="true"
+									value="@{cntrl.competencia.modalidadCompetencia.tipoCompetencia.nombre }">
+								</textbox>
+								<label value="Modalidad"></label>
+								<textbox id="txtModalidadCompetencia"
+									value="@{cntrl.competencia.modalidadCompetencia.nombre }"
+									disabled="true">
+								</textbox>
+							</row>
+							<row style="border:none">
+								<label value="Fecha Inicio"></label>
+								<datebox id="txtFechaInicioCompetencia"
+									value="@{cntrl.competencia.fechaInicio }" disabled="true" />
+								<label value="Fecha Fin"></label>
+								<datebox id="txtFechaFin"
+									value="@{cntrl.competencia.fechaFin }" disabled="true" />
+							</row>
+						</rows>
+					</grid>
+				</panelchildren>
+			</panel>
+			<tabbox>
 
-	<!--  Indicadores Colectivos -->	
-		<tabpanel>
-			<panel >
-			
-			<panelchildren>
-				<grid >
-					<columns>
-						<column width="30%"></column>
-						<column width="80%"></column>														
-					</columns>
-					<rows>
-						<row>
-							<label>Categoría</label>
-							<combobox value="Seleccione" width="60%">
-								<comboitem label="Preparatorio I Nivel" />
-								<comboitem label="Preparatorio II Nivel" />
-								<comboitem label="Pre-Infantil" />
-								<comboitem label="Infantil" />
-								<comboitem label="Pre-Junior" />
-								<comboitem label="Junior" />
-								<comboitem label="Juvenil" />
-							</combobox>
-						</row>
-						<row>
-							<label>Tipo</label>
-							<combobox value="Seleccione" width="60%">
-								<comboitem label="Ofensivo" />
-								<comboitem label="Defensivo" />
-								<comboitem label="Pitcher" />
-								<comboitem label="Catcher" />																					
-							</combobox>
-						</row>
-					</rows>
-				</grid>
-				
-				<grid >
-					<columns >
-						<column width="45%"></column>
-						<column width="12%" align="Center"></column>
-						<column width="45%"></column>
-					</columns>
-					<rows>
-						<row>
-							<listbox >
-								<listhead>
-									<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
-									<listheader label="Indicadores" sort="auto" />
-								</listhead>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Turnos al Bate (AB)" />
-								</listitem>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Carreras Anotadas (D)" />
-								</listitem>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Hits Anotados (H)" />
-								</listitem>
-								<listitem>
-										<listcell>
-											<checkbox />
-										</listcell>
-										<listcell label="Dobles (2D)" />
-									</listitem>
-							</listbox>
-								
-							<grid>
-								<rows>
-									<row>
-									<button onClick="" image="/Recursos/Imagenes/rightrightarrow_g.png"/>
-									</row>
-									<row>
-									<button onClick="" image="/Recursos/Imagenes/rightarrow_g.png" />
-									</row>
-									<row>
-									<button onClick="" image="/Recursos/Imagenes/leftarrow_g.png"/>
-									</row>
-									<row>
-									<button onClick="" image="/Recursos/Imagenes/leftleftarrow_g.png"/>
-									</row>
-								</rows>
-								
-							</grid>								
-									
-							<listbox >
-								<listhead>
-									<listheader label="" sort="auto" width="20%"> <checkbox></checkbox></listheader>
-									<listheader label="Indicadores Seleccionados" sort="auto" />
-								</listhead>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Turnos al Bate (AB)" />
-								</listitem>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Carreras Anotadas (D)" />
-								</listitem>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Hits Anotados (H)" />
-								</listitem>
-								<listitem>
-									<listcell>
-										<checkbox />
-									</listcell>
-									<listcell label="Dobles (2D)" />
-								</listitem>
-							</listbox>
-						</row>	
-					</rows>
-					
-				</grid>
+				<tabs>
+					<tab label="Indicadores Individuales" />
+					<tab label="Indicadores Colectivos" />
+				</tabs>
 
-		</panelchildren>
-				</panel>
-			
-		</tabpanel>
-																						
-		
-		</tabpanels>
-	</tabbox>
-	<div >
- 		<div align="right"  height="30px">    	
-					<button image="/Recursos/Imagenes/guardar.ico" label="Guardar"
-							orient="horizontal"  ></button>
-					<button image="/Recursos/Imagenes/quitar.ico" label="Eliminar"
-							orient="horizontal"  ></button>
-					<button image="/Recursos/Imagenes/cancelar.ico" label="Cancelar"
-							orient="horizontal" ></button>
-					<button image="/Recursos/Imagenes/salir.png" label="Salir"
-							orient="horizontal" ></button>
- 		</div>
-    </div>	
-		
-</window>
-</div>
+				<tabpanels>
+					<tabpanel>
+						<panel>
+							<panelchildren>
+
+								<grid>
+									<columns>
+										<column width="80%"></column>
+										<column width="80%"></column>
+									</columns>
+
+									<rows>
+
+										<row style="border:none"
+											align="left">
+											<hbox>
+												<label
+													value="Categoría" />
+												<space width="5%"></space>
+												<combobox 
+													model="@{cntrl.categorias}" value="--Seleccione--" id="cmbSeleccionarCategoria">
+													<comboitem
+														self="@{each=categoriaCompetencia }"
+														label="@{categoriaCompetencia.categoria.nombre }" value="@{categoriaCompetencia.categoria}">
+													</comboitem>
+												</combobox>
+											</hbox>
+										</row>
+										<row style="border:none"
+											align="left">
+											<hbox>
+												<label
+													value="Modalidad" />
+												<space width="5%"></space>
+												<combobox id="cmbSeleccionarModalidad" 
+													value="--Seleccione--">
+													<comboitem />
+												
+												</combobox>
+											</hbox>
+										</row>
+									</rows>
+								</grid>
+
+								<grid>
+									<columns>
+										<column width="45%"></column>
+										<column width="12%">
+										</column>
+										<column width="45%"></column>
+									</columns>
+									<rows>
+										<row style="border:none">
+											<listbox
+												id="lsbxIndicadores" mold="paging" style="margin-top:5px"
+												model="@{cntrl.indicadores}" height="200px" multiple="true"
+												checkmark="true">
+												<listhead>
+
+													<listheader
+														label="Indicadores" sort="auto" />
+												</listhead>
+												<listitem
+													self="@{each=indicador}" value="@{indicador}">
+
+													<listcell
+														label="@{indicador.indicador.nombre}">
+													</listcell>
+												</listitem>
+											</listbox>
+
+											<grid>
+												<rows>
+													<row
+														style="border:none" align="center">
+														<button
+															id="btnMoverDerecha" onClick="" 
+															image="/Recursos/Imagenes/rightarrow_g.png"
+															style="center" />
+													</row>
+													<row
+														style="border:none" align="center">
+														<button
+															id="btnMoverIzquierda" onClick=""
+															image="/Recursos/Imagenes/leftarrow_g.png"
+															style="center" />
+													</row>
+
+												</rows>
+											</grid>
+
+											<listbox
+												id="lsbxIndicadoresSeleccionados" mold="paging" style="margin-top:5px"
+												model="@{cntrl.indicadoresAux}" height="200px" multiple="true"
+												checkmark="true">
+												<listhead>
+
+													<listheader
+														label="Indicadores Seleccionados" sort="auto" />
+												</listhead>
+												<listitem
+													self="@{each=indicador}" value="@{indicador}">
+
+													<listcell
+														label="@{indicador.indicador.nombre}">
+													</listcell>
+												</listitem>
+											</listbox>
+										</row>
+									</rows>
+								</grid>
+
+							</panelchildren>
+						</panel>
+
+
+					</tabpanel>
+
+					<!--  Indicadores Colectivos -->
+					<tabpanel>
+						<panel>
+							<panelchildren>
+
+								<grid>
+									<columns>
+										<column width="80%"></column>
+										<column width="80%"></column>
+									</columns>
+
+									<rows>
+
+										<row style="border:none"
+											align="left">
+											<hbox>
+												<label
+													value="Categoría" />
+												<space width="5%"></space>
+												<combobox
+													model="@{cntrl.categorias}" value="--Seleccione--">
+													<comboitem
+														self="@{each=categoriaCompetencia }"
+														label="@{categoriaCompetencia.categoria.nombre }">
+													</comboitem>
+												</combobox>
+											</hbox>
+										</row>
+										<row style="border:none"
+											align="left">
+											<hbox>
+												<label
+													value="Modalidad" />
+												<space width="5%"></space>
+												<combobox
+													value="--Seleccione--">
+													<comboitem
+														label="Ofensivo" />
+													<comboitem
+														label="Defensivo" />
+												</combobox>
+											</hbox>
+										</row>
+									</rows>
+								</grid>
+
+								<grid>
+									<columns>
+										<column width="45%"></column>
+										<column width="12%"
+											align="Center">
+										</column>
+										<column width="45%"></column>
+									</columns>
+									<rows>
+										<row style="border:none">
+											<listbox
+												id="lsbxIndicadoresColectivos" mold="paging"
+												style="margin-top:5px" model="@{cntrl.indicadores}"
+												height="200px">
+												<listhead>
+													<listheader label=""
+														sort="auto" width="20%">
+														<checkbox></checkbox>
+													</listheader>
+													<listheader
+														label="Indicadores" sort="auto" />
+												</listhead>
+												<listitem
+													self="@{each=indicador}">
+													<listcell>
+														<checkbox />
+													</listcell>
+													<listcell
+														label="@{indicador.nombre}">
+													</listcell>
+												</listitem>
+											</listbox>
+
+											<grid>
+												<rows>
+													<row
+														style="border:none" align="center">
+														<button
+															onClick="" image="/Recursos/Imagenes/rightarrow_g.png"
+															style="center" />
+													</row>
+													<row
+														style="border:none" align="center">
+														<button
+															onClick="" image="/Recursos/Imagenes/leftarrow_g.png"
+															style="center" />
+													</row>
+
+												</rows>
+											</grid>
+
+											<listbox
+												id="lsbxIndicadoresSeleccionadosColectivos" mold="paging"
+												style="margin-top:5px" height="200px">
+												<listhead>
+													<listheader label=""
+														sort="auto" width="20%">
+														<checkbox></checkbox>
+													</listheader>
+													<listheader
+														label="Indicadores Seleccionados" sort="auto" />
+												</listhead>
+
+											</listbox>
+										</row>
+									</rows>
+								</grid>
+
+							</panelchildren>
+						</panel>
+
+
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+			<div>
+				<div align="right" height="30px">
+					<button image="/Recursos/Imagenes/guardar.ico"
+						label="Guardar" orient="horizontal">
+					</button>
+					<button image="/Recursos/Imagenes/eliminar.ico"
+						label="Eliminar" orient="horizontal">
+					</button>
+					<button image="/Recursos/Imagenes/cancelar.ico"
+						label="Cancelar" orient="horizontal">
+					</button>
+					<button image="/Recursos/Imagenes/salir.png"
+						label="Salir" orient="horizontal">
+					</button>
+				</div>
+			</div>
+
+		</window>
+	</div>
 </zk>

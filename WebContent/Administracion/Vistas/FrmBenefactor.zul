@@ -1,0 +1,26 @@
+<?page title="Benefactores" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window id="frmBenefactor" title="Benefactor" border="normal"
+		width="690px">
+		<zscript><![CDATA[
+	public void mostrar() {
+		if (cmbBenefactor.getSelectedItem().getValue().equals("2")) {
+			Window window = (Window) Executions.createComponents(
+					"frmBenefactorJuridico.zul", null, null);
+			frmBenefactor.onClose();
+		}
+		if (cmbBenefactor.getSelectedItem().getValue().equals("1")) {
+			Window window = (Window) Executions.createComponents(
+					"frmBenefactorNatural.zul", null, null);
+			frmBenefactor.onClose();
+
+		}
+	}
+]]></zscript>
+
+		<combobox onSelect="mostrar()" id="cmbBenefactor">
+			<comboitem label="Natural" value="1"></comboitem>
+			<comboitem label="Juridica" value="2"></comboitem>
+		</combobox>
+	</window>
+</zk>
