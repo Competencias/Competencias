@@ -6,9 +6,9 @@ import servicio.interfaz.IServicioIndicador;
 
 import dao.general.DaoIndicador;
 
+import modelo.DatoBasico;
 import modelo.Divisa;
 import modelo.Indicador;
-import modelo.DatoBasico;
 
 public class ServicioIndicador implements IServicioIndicador {
 
@@ -16,19 +16,21 @@ public class ServicioIndicador implements IServicioIndicador {
 	@Override
 	public void eliminar(Indicador i) {
 		// TODO Auto-generated method stub
+		daoIndicador.eliminar(i);
 
 	}
 
 	@Override
 	public void agregar(Indicador i) {
 		// TODO Auto-generated method stub
+		daoIndicador.guardar(i);
 
 	}
 
 	@Override
 	public void actualizar(Indicador i) {
 		// TODO Auto-generated method stub
-
+		daoIndicador.actualizar(i);
 	}
 
 	/*@Override
@@ -62,6 +64,5 @@ public class ServicioIndicador implements IServicioIndicador {
 	public List<Indicador> buscarPorDatoBasico(DatoBasico datoBasico){
 		return daoIndicador.buscarPorDatoBasico(datoBasico);
 	}
-
 
 }

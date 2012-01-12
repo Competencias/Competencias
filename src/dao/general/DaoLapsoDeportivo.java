@@ -1,4 +1,5 @@
 package dao.general;
+
 import java.util.List;
 
 import modelo.LapsoDeportivo;
@@ -7,8 +8,6 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-
-
 
 import dao.generico.GenericDao;
 
@@ -20,5 +19,6 @@ public class DaoLapsoDeportivo extends GenericDao {
 		c.add(Restrictions.eq("estatus",'A'));
 		return c.list();
 	}
+
 
 }

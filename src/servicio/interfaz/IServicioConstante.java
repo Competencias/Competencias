@@ -10,12 +10,8 @@ public interface IServicioConstante {
 
 	public abstract void agregar(Constante c);
 	
-	public abstract void actualizar(Constante c);
-	
 	public abstract  List<Constante> listar ();
 	
 	public abstract List<Constante> listarActivos();
-
-	//List<Constante> listarActivos(Constante c);
 
 }

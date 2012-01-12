@@ -37,11 +37,9 @@ public class ServicioRoster implements IServicioRoster {
 
 	}
 
-//	@Override
-//	public List<Roster> listar() {
-////		return daoRoster.listarRoster();
-//		
-//		return a;
-//	}
+	@Override
+	public List<Roster> listar() {
+		return daoRoster.listar( Roster.class);
+	}
 
 }

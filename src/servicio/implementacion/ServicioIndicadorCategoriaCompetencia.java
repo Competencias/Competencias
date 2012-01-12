@@ -8,6 +8,7 @@ import modelo.Categoria;
 import modelo.Competencia;
 import modelo.Indicador;
 import modelo.IndicadorCategoriaCompetencia;
+import modelo.Liga;
 import servicio.interfaz.IServicioIndicadorCategoriaCompetencia;
 
 public class ServicioIndicadorCategoriaCompetencia implements
@@ -53,6 +54,9 @@ public class ServicioIndicadorCategoriaCompetencia implements
 		return daoIndicadorCategoriaCompetencia.listarIndicadoresPorCategoria(c, comp);
 		
 	}
+	 
+	
+	
 	
 	
 }

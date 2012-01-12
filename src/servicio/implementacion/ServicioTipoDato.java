@@ -54,6 +54,7 @@ public class ServicioTipoDato implements IServicioTipoDato {
 	public List<TipoDato> buscarTrue(Boolean bool) {
 		return daoTipoDato.buscarTrue(bool);
 	}
+	
 	@Override
 	public TipoDato buscarPorTipo(String td) {
 		// TODO Auto-generated method stub

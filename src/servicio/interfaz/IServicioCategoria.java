@@ -14,5 +14,4 @@ public interface IServicioCategoria {
 	public List<Categoria> listarActivos();
 	
 	public abstract List<Categoria> listar();
-	
 }

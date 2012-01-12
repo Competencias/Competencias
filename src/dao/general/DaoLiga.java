@@ -1,4 +1,7 @@
 package dao.general;
+
+import dao.generico.GenericDao;
+
 import java.util.List;
 
 import modelo.Liga;
@@ -7,10 +10,8 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
-import dao.generico.GenericDao;
 
 public class DaoLiga extends GenericDao{
-	
 	public List<Liga> listarActivos(){
 		Session session = getSession();
 		Transaction tx = session.beginTransaction();
@@ -18,6 +19,5 @@ public class DaoLiga extends GenericDao{
 		c.add(Restrictions.eq("estatus",'A'));
 		return c.list();
 	}
-	
 
 }

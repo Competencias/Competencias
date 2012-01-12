@@ -36,6 +36,11 @@ public class ServicioCategoria implements IServicioCategoria {
 		daoCategoria.actualizar(c);
 
 	}
+
+	@Override
+	public List<Categoria> listar() {
+		return daoCategoria.listar( Categoria.class);
+	}
 	
 	@Override
 	public List<Categoria> listarActivos() {
@@ -43,12 +48,5 @@ public class ServicioCategoria implements IServicioCategoria {
 		return daoCategoria.listarActivos();
 	}
 
-	@Override
-	public List<Categoria> listar() {
-		return daoCategoria.listar( Categoria.class);
-	}
 
-	
-
-	
 }

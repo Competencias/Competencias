@@ -3,7 +3,6 @@ package dao.general;
 import java.util.List;
 
 import modelo.Divisa;
-import modelo.Equipo;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -43,6 +42,5 @@ public class DaoDivisa extends GenericDao {
 		List <Divisa> lista = c.list();		
 		return lista;
 	}
-
 
 }

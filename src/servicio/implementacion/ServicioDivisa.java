@@ -71,7 +71,4 @@ public class ServicioDivisa implements IServicioDivisa {
 		return daoDivisa.listarDivisaForanea();
 		
 	}
-	
-	
-
 }

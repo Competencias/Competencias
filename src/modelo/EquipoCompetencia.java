@@ -1,6 +1,6 @@
 package modelo;
 
-// Generated 10/01/2012 04:06:24 PM by Hibernate Tools 3.4.0.CR1
+// Generated 11/01/2012 03:50:04 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -25,8 +25,7 @@ public class EquipoCompetencia implements java.io.Serializable {
 	private Competencia competencia;
 	private Equipo equipo;
 	private char estatus;
-	private Set<JugadorRefuerzo> jugadorRefuerzos = new HashSet<JugadorRefuerzo>(
-			0);
+	private Set<JugadorForaneo> jugadorForaneos = new HashSet<JugadorForaneo>(0);
 	private Set<EquipoJuego> equipoJuegos = new HashSet<EquipoJuego>(0);
 
 	public EquipoCompetencia() {
@@ -44,14 +43,14 @@ public class EquipoCompetencia implements java.io.Serializable {
 
 	public EquipoCompetencia(int codigoEquipoCompetencia,
 			PersonaNatural personaNatural, Competencia competencia,
-			Equipo equipo, char estatus, Set<JugadorRefuerzo> jugadorRefuerzos,
+			Equipo equipo, char estatus, Set<JugadorForaneo> jugadorForaneos,
 			Set<EquipoJuego> equipoJuegos) {
 		this.codigoEquipoCompetencia = codigoEquipoCompetencia;
 		this.personaNatural = personaNatural;
 		this.competencia = competencia;
 		this.equipo = equipo;
 		this.estatus = estatus;
-		this.jugadorRefuerzos = jugadorRefuerzos;
+		this.jugadorForaneos = jugadorForaneos;
 		this.equipoJuegos = equipoJuegos;
 	}
 
@@ -105,12 +104,12 @@ public class EquipoCompetencia implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "equipoCompetencia")
-	public Set<JugadorRefuerzo> getJugadorRefuerzos() {
-		return this.jugadorRefuerzos;
+	public Set<JugadorForaneo> getJugadorForaneos() {
+		return this.jugadorForaneos;
 	}
 
-	public void setJugadorRefuerzos(Set<JugadorRefuerzo> jugadorRefuerzos) {
-		this.jugadorRefuerzos = jugadorRefuerzos;
+	public void setJugadorForaneos(Set<JugadorForaneo> jugadorForaneos) {
+		this.jugadorForaneos = jugadorForaneos;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "equipoCompetencia")

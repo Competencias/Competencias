@@ -3,10 +3,8 @@ package servicio.implementacion;
 import java.util.List;
 
 import dao.general.DaoConstante;
-import dao.general.DaoIndicador;
 
 import modelo.Constante;
-
 import servicio.interfaz.IServicioConstante;
 
 public class ServicioConstante implements IServicioConstante {
@@ -24,27 +22,26 @@ public class ServicioConstante implements IServicioConstante {
 	@Override
 	public void eliminar(Constante c) {
 		// TODO Auto-generated method stub
-		daoConstante.eliminar(c);
 
 	}
 
 	@Override
 	public void agregar(Constante c) {
 		// TODO Auto-generated method stub
-		daoConstante.guardar(c);
+
 	}
 
-	@Override
+	/*@Override
 	public void actualizar(Constante c) {
 		// TODO Auto-generated method stub
-		daoConstante.actualizar(c);
-	}
-//
-//	@Override
-//	public Constante buscarPorCodigo(Constante c) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
+
+	}*/
+
+	/*@Override
+	public Constante buscarPorCodigo(Constante c) {
+		// TODO Auto-generated method stub
+		return null;
+	}*/
 
 	@Override
 	public List<Constante> listar() {
@@ -55,7 +52,7 @@ public class ServicioConstante implements IServicioConstante {
 	@Override
 	public List<Constante> listarActivos() {
 		// TODO Auto-generated method stub
-		return daoConstante.listarActivos(Constante.class);
+		return null;
 	}
-	
+
 }

@@ -16,6 +16,8 @@ import org.zkoss.zkplus.databind.AnnotateDataBinder;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.api.Comboitem;
 
+import comun.EstadoCompetencia;
+
 import servicio.implementacion.ServicioCategoria;
 import servicio.implementacion.ServicioEquipo;
 import servicio.implementacion.ServicioRoster;
@@ -26,7 +28,7 @@ public class CntrlFrmRoster extends GenericForwardComposer {
 	ServicioCategoria servicioCategoria;
 	ServicioEquipo servicioEquipo;
 	AnnotateDataBinder binder;
-	Component catalogo;
+	Component formulario;
 	
 	Categoria categoria;
 	Equipo equipo;
@@ -73,7 +75,7 @@ public class CntrlFrmRoster extends GenericForwardComposer {
 	
 		c.setVariable("cntrl", this, true);
 	
-		catalogo = c;
+		formulario = c;
 		
 		restaurarCategoria();
 		
@@ -136,25 +138,29 @@ public class CntrlFrmRoster extends GenericForwardComposer {
 		
 	} 
 	
+	// //////////// Llama al catalogo de Competencias
+	// ///////////////////////////////
 	public void onClick$btnBuscar() {
-		//se crea el catalogo y se llama
-		Component c = Executions.createComponents("/Competencias/Vistas/FrmCatalogoCompetencia.zul", null, null);
-		//asigna una referencia del formulario al catalogo.
-		c.setVariable("catalogo",catalogo, false);
-	    		
-		catalogo.addEventListener("onCatalogoCerrado", new EventListener() {		
-			
-			//Este metodo se llama cuando se envia la señal desde el catalogo
+		// se crea el catalogo y se llama
+		Component catalogo = Executions.createComponents(
+				"/Competencias/Vistas/FrmCatalogoCompetencia.zul", null, null);
+		// asigna una referencia del formulario al catalogo.
+		catalogo.setVariable("formulario", formulario, false);
+		catalogo.setVariable("estatus", EstadoCompetencia.REGISTRADA, false);
+		formulario.addEventListener("onCatalogoCerrado", new EventListener() {
+			@Override
+			// Este metodo se llama cuando se envia la señal desde el catalogo
 			public void onEvent(Event arg0) throws Exception {
-				//se obtiene la divisa
-				competencia = (Competencia) catalogo.getVariable("competencia",false);
-				
-				binder.loadAll();				
+				// se obtiene la competencia
+				competencia = (Competencia) formulario.getVariable(
+						"competencia", false);
+			
+				binder.loadAll();
 			}
 		});
-	
-	
+
 	}
+	
 
 	public Competencia getCompetencia() {
 		return competencia;

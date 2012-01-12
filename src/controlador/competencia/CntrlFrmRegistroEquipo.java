@@ -123,8 +123,8 @@ public class CntrlFrmRegistroEquipo extends GenericForwardComposer {
 				competencia = (Competencia) formulario.getVariable(
 						"competencia", false);
 				categorias = servicioCategoriaCompetencia
-						.listarCategoriaPorCompetencia(competencia
-								.getCodigoCompetencia());
+						.listarCategoriaPorCompetencia(competencia.getCodigoCompetencia());
+				
 				divisas = servicioDivisa.listarDivisaForanea();
 				equiposforaneos = servicioEquipo.listarEquipoForaneos();
 				binder.loadAll();

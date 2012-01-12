@@ -1,6 +1,6 @@
 package modelo;
 
-// Generated 10/01/2012 04:06:24 PM by Hibernate Tools 3.4.0.CR1
+// Generated 11/01/2012 03:50:04 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -127,7 +127,7 @@ public class Indicador implements java.io.Serializable {
 		this.abreviatura = abreviatura;
 	}
 
-	@Column(name = "formula", nullable = false)
+	@Column(name = "formula", nullable = true)
 	public String getFormula() {
 		return this.formula;
 	}

@@ -100,8 +100,8 @@ public class CntrlFrmCrearCompetencia extends GenericForwardComposer {
 	    c.setVariable("cntrl",this,true);	
 	    tipoCompetencias = servicioTipoCompetencia.listarActivos();	
 	    lapsoDeportivos = servicioLapsoDeportivo.listarActivos();
-	    datoBasicos = servicioDatoBasico.listarEstados(); 
-	    ordenarEstado(datoBasicos);
+//	    datoBasicos = servicioDatoBasico.listarEstados(); 
+//	    ordenarEstado(datoBasicos);
 	    categorias = servicioCategoria.listarActivos();
 	    ligas = servicioLiga.listarActivos();
 	    ordenarLiga(ligas);

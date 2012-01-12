@@ -1,6 +1,6 @@
 package modelo;
 
-// Generated 10/01/2012 04:06:24 PM by Hibernate Tools 3.4.0.CR1
+// Generated 11/01/2012 03:50:04 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -36,14 +36,13 @@ public class MaterialActividad implements java.io.Serializable {
 
 	public MaterialActividad(int codigoMaterialActividad, Material material,
 			char estatus, int cantidadEntregada, int cantidadDevuelta,
-			Date fechaDevolucion, String observacion) {
+			Date fechaDevolucion) {
 		this.codigoMaterialActividad = codigoMaterialActividad;
 		this.material = material;
 		this.estatus = estatus;
 		this.cantidadEntregada = cantidadEntregada;
 		this.cantidadDevuelta = cantidadDevuelta;
 		this.fechaDevolucion = fechaDevolucion;
-		this.observacion = observacion;
 	}
 
 	public MaterialActividad(int codigoMaterialActividad,
@@ -149,7 +148,7 @@ public class MaterialActividad implements java.io.Serializable {
 		this.fechaDevolucion = fechaDevolucion;
 	}
 
-	@Column(name = "observacion", nullable = false)
+	@Column(name = "observacion")
 	public String getObservacion() {
 		return this.observacion;
 	}

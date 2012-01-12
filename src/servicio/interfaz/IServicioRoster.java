@@ -11,5 +11,5 @@ public interface IServicioRoster {
 
 	public abstract void actualizar(Roster c);
 
-//	public abstract List<Roster> listar();
+	public abstract List<Roster> listar();
 }

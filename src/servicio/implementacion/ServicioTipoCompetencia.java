@@ -39,8 +39,8 @@ public class ServicioTipoCompetencia implements IServicioTipoCompetencia {
 
 	@Override
 	public List<TipoCompetencia> listarActivos() {
-		return daoTipoCompetencia.listarActivos();
-	
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

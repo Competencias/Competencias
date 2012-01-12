@@ -34,14 +34,12 @@ public class ServicioLapsoDeportivo implements IServicioLapsoDeportivo {
 		// TODO Auto-generated method stub
 		return daoLapsoDeportivo.listar(LapsoDeportivo.class);
 	}
-	
 
 	@Override
 	public List<LapsoDeportivo> listarActivos() {
 		return daoLapsoDeportivo.listarActivos();
 	}	
-	
-
+	 
 	public DaoLapsoDeportivo getDaoLapsoDeportivo() {
 		return daoLapsoDeportivo;
 	}

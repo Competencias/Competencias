@@ -1,6 +1,6 @@
 package modelo;
 
-// Generated 10/01/2012 04:06:24 PM by Hibernate Tools 3.4.0.CR1
+// Generated 11/01/2012 03:50:04 PM by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -28,6 +28,9 @@ public class Usuario implements java.io.Serializable {
 	private String nick;
 	private String password;
 	private char estatus;
+	private Set<Perfil> perfils = new HashSet<Perfil>(0);
+	private Set<DetalleSeguridadFuncional> detalleSeguridadFuncionals = new HashSet<DetalleSeguridadFuncional>(
+			0);
 	private Set<SeguridadFuncional> seguridadFuncionals = new HashSet<SeguridadFuncional>(
 			0);
 
@@ -42,11 +45,15 @@ public class Usuario implements java.io.Serializable {
 	}
 
 	public Usuario(Personal personal, String nick, String password,
-			char estatus, Set<SeguridadFuncional> seguridadFuncionals) {
+			char estatus, Set<Perfil> perfils,
+			Set<DetalleSeguridadFuncional> detalleSeguridadFuncionals,
+			Set<SeguridadFuncional> seguridadFuncionals) {
 		this.personal = personal;
 		this.nick = nick;
 		this.password = password;
 		this.estatus = estatus;
+		this.perfils = perfils;
+		this.detalleSeguridadFuncionals = detalleSeguridadFuncionals;
 		this.seguridadFuncionals = seguridadFuncionals;
 	}
 
@@ -97,6 +104,25 @@ public class Usuario implements java.io.Serializable {
 
 	public void setEstatus(char estatus) {
 		this.estatus = estatus;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario")
+	public Set<Perfil> getPerfils() {
+		return this.perfils;
+	}
+
+	public void setPerfils(Set<Perfil> perfils) {
+		this.perfils = perfils;
+	}
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario")
+	public Set<DetalleSeguridadFuncional> getDetalleSeguridadFuncionals() {
+		return this.detalleSeguridadFuncionals;
+	}
+
+	public void setDetalleSeguridadFuncionals(
+			Set<DetalleSeguridadFuncional> detalleSeguridadFuncionals) {
+		this.detalleSeguridadFuncionals = detalleSeguridadFuncionals;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario")

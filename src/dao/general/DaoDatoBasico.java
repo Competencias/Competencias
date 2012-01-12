@@ -100,6 +100,7 @@ public class DaoDatoBasico extends GenericDao {
 		return lista;
 	}
 	
+	
 	public DatoBasico buscarPorString(String s) {
 		// TODO Auto-generated method stub
 		Session session = getSession();
@@ -109,4 +110,7 @@ public class DaoDatoBasico extends GenericDao {
 		c.add(Restrictions.eq("estatus", 'A'));
 		return (DatoBasico) c.list().get(0);
 	}
+	
+	
+	
 }

@@ -3,14 +3,14 @@
 
 <beans>
 
-<!-- 	<bean id="genericDao" class="dao.generico.GenericDao"> -->
-<!-- 	</bean> -->
-<!-- 	<bean id="daoConceptoNomina" class="dao.general.DaoConceptoNomina"> -->
-<!-- 	</bean> -->
+	<bean id="genericDao" class="dao.generico.GenericDao">
+	</bean>
+	<bean id="daoConceptoNomina" class="dao.general.DaoConceptoNomina">
+	</bean>
 	
-<!-- 	<bean id="servicioConceptoNomina" class="servicio.implementacion.ServicioConceptoNomina"> -->
-<!-- 		<property name="daoConceptoNomina" ref="daoConceptoNomina"></property> -->
-<!-- 	</bean> -->
+	<bean id="servicioConceptoNomina" class="servicio.implementacion.ServicioConceptoNomina">
+		<property name="daoConceptoNomina" ref="daoConceptoNomina"></property>
+	</bean>
 	
 	<bean id="daoCuentaPagar" class="dao.general.DaoCuentaPagar">
 	</bean>
@@ -18,13 +18,7 @@
 	<bean id="servicioCuentaPagar" class="servicio.implementacion.ServicioCuentaPagar">
 		<property name="daoCuentaPagar" ref="daoCuentaPagar"></property>
 	</bean>
-
-	<bean id="daoRoster" class="dao.general.DaoRoster">
-	</bean>
-
-	<bean id="servicioRoster" class="servicio.implementacion.ServicioRoster">
-		<property name="daoRoster" ref="daoRoster"></property>
-	</bean>
+	
 	<bean id="daoCuentaPagarMaterial" class="dao.general.DaoCuentaPagarMaterial">
 	</bean>
 	
@@ -305,12 +299,12 @@
 		<property name="daoEquipoCompetencia" ref="daoEquipoCompetencia"></property>
 	</bean>
 	
-<!-- 	<bean id="daoJugadorForaneo" class="dao.general.DaoJugadorForaneo"> -->
-<!-- 	</bean> -->
+	<bean id="daoJugadorForaneo" class="dao.general.DaoJugadorForaneo">
+	</bean>
 	
-<!-- 	<bean id="servicioJugadorForaneo" class="servicio.implementacion.ServicioJugadorForaneo"> -->
-<!-- 		<property name="daoJugadorForaneo" ref="daoJugadorForaneo"></property> -->
-<!-- 	</bean> -->
+	<bean id="servicioJugadorForaneo" class="servicio.implementacion.ServicioJugadorForaneo">
+		<property name="daoJugadorForaneo" ref="daoJugadorForaneo"></property>
+	</bean>
 	
 	<bean id="daoEquipoJuego" class="dao.general.DaoEquipoJuego">
 	</bean>
@@ -340,12 +334,12 @@
 		<property name="daoPersonalForaneoJuego" ref="daoPersonalForaneoJuego"></property>
 	</bean>
 	
-<!-- 	<bean id="daoPersonalJuego" class="dao.general.DaoPersonalJuego"> -->
-<!-- 	</bean> -->
+	<bean id="daoPersonalJuego" class="dao.general.DaoPersonalJuego">
+	</bean>
 	
-<!-- 	<bean id="servicioPersonalJuego" class="servicio.implementacion.ServicioPersonalJuego"> -->
-<!-- 		<property name="daoPersonalJuego" ref="daoPersonalJuego"></property> -->
-<!-- 	</bean> -->
+	<bean id="servicioPersonalJuego" class="servicio.implementacion.ServicioPersonalJuego">
+		<property name="daoPersonalJuego" ref="daoPersonalJuego"></property>
+	</bean>
 	
 	<bean id="daoPersonalForaneo" class="dao.general.DaoPersonalForaneo">
 	</bean>
@@ -561,11 +555,11 @@
 		<property name="daoRetiroTraslado" ref="daoRetiroTraslado"></property>
 	</bean>
 
-<!-- 	<bean id="daoRoster" class="dao.general.DaoRoster"> -->
-<!-- 	</bean> -->
-<!-- 	<bean id="servicioRoster" class="servicio.implementacion.ServicioRoster"> -->
-<!-- 		<property name="daoRoster" ref="daoRoster"></property> -->
-<!-- 	</bean> -->
+	<bean id="daoRoster" class="dao.general.DaoRoster">
+	</bean>
+	<bean id="servicioRoster" class="servicio.implementacion.ServicioRoster">
+		<property name="daoRoster" ref="daoRoster"></property>
+	</bean>
 
 		<bean id="daoTallaPorIndumentaria" class="dao.general.DaoTallaPorIndumentaria">
 	</bean>
